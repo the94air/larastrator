@@ -1,0 +1,6 @@
+@tailwind preflight;
+@tailwind components;
+@import './components/variables';
+@import './components/normlize';
+@import './components/navbar';
+@tailwind utilities;

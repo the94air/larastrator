@@ -1,0 +1,13 @@
+// Fonts
+$main-font-family: 'Source Sans Pro', sans;
+$main-text-color: config('colors.grey-darken');
+
+// body
+$body-background-color: config('colors.grey-lighten');
+
+// Navbar
+$navbar-background: config('colors.white');
+
+// Links
+$links-color: $main-text-color;
+$links-color-hover: config('colors.grey-dark');
