@@ -11,3 +11,19 @@ $navbar-background: config('colors.white');
 // Links
 $links-color: $main-text-color;
 $links-color-hover: config('colors.grey-dark');
+$links-color-transition-duration: 100ms;
+$links-color-transition-function: ease;
+
+// Sidebar
+$sidebar-links-color: $links-color;
+$sidebar-links-color-hover: config('colors.grey-semi-light');
+$sidebar-icons-color: config('colors.grey-semi-light');
+$sidebar-icons-color-hover: $links-color-hover;
+$sidebar-icons-color-transition-function: 100ms;
+$sidebar-icons-color-transition-duration: ease;
+$sidebar-icons-color-select: $links-color-hover;
+$sidebar-line-color: config('colors.grey-light');
+$sidebar-line-color-hover: config('colors.grey');
+$sidebar-line-color-select: $sidebar-icons-color-hover;
+$sidebar-dropdowns-slide-transition-function: 100ms;
+$sidebar-dropdowns-slide-transition-duration: ease;

@@ -1,32 +1,23 @@
 .navbar {
     @apply shadow py-2 px-4;
     background: $navbar-background;
-}
-
-.navbar-fixed {
-    @apply fixed pin-t pin-l pin-r;
-}
-
-.navbar-container {
-    @apply relative flex flex-wrap items-center justify-between w-full mx-auto px-4;
-    @media (min-width: 576px) {
-        max-width: 576px;
+    &.navbar-fixed {
+        @apply fixed pin-t pin-l pin-r;
     }
-    @media (min-width: 768px) {
-        max-width: 768px;
+    .navbar-main {
+        @apply relative flex flex-col flex-wrap items-center justify-between;
+        @screen sm {
+            @apply flex-row;
+        }
+        .navbar-brand {
+            @apply inline-block text-xl leading-normal whitespace-no-wrap;
+            padding-top: 0.3125rem;
+            padding-bottom: 0.3125rem;
+            > a {
+                @apply no-underline;
+            }
+        }
     }
-    @media (min-width: 992px) {
-        max-width: 992px;
-    }
-    @media (min-width: 1200px) {
-        max-width: 1200px;
-    }
-}
-
-.navbar-brand {
-    @apply inline-block mr-4 text-xl leading-normal whitespace-no-wrap;
-    padding-top: 0.3125rem;
-    padding-bottom: 0.3125rem;
 }
 
 .navbar-dot, .navbar-status {
@@ -35,10 +26,18 @@
 
 .navbar-menu {
     @apply flex flex-row items-center pl-0 mb-0 list-reset;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
     > .navbar-item {
         @apply ml-4;
+        &:nth-child(1) {
+            @apply ml-0;
+        }
         > .navbar-link, > .navbar-notify {
-            @apply relative;
+            @apply relative no-underline;
+        }
+        > .navbar-link.select {
+            @apply underline;
         }
         > .navbar-notify {
             @apply mr-2;

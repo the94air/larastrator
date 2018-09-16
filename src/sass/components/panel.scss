@@ -1,0 +1,7 @@
+.panel {
+    @apply flex;
+}
+
+.panel-card {
+    @apply bg-white shadow rounded p-5 w-full;
+}

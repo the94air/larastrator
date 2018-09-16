@@ -2,6 +2,11 @@
 2. Setup Tailwindcss.
 3. Setup Vuejs.
 4. Setup Fonts + Font color.
-5. Create the navbar.
-6. default links style.
-3. Setup font awesome icons.
+5. Change 'container' confing in tailwind.js
+6. Create the navbar.
+7. default links style.
+8. Setup font awesome icons.
+9. Create panel style.
+10. Create sidebar style.
+12. install 'vue-slide-up-down' vue plugin.
+13. use 'vue-slide-up-down' plugin on the sidebar dropdown.
