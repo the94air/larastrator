@@ -41,7 +41,7 @@
         }
         > .navbar-notify {
             @apply mr-2;
-            > svg {
+            > .svg-inline--fa {
                 @apply text-xl;
             }
             > .navbar-dot {
@@ -65,9 +65,11 @@
                     @apply text-sm mb-1;
                 }
                 > span:nth-child(2) {
-                    @apply flex flex-row items-center text-xs;
+                    @apply flex uppercase flex-row items-center text-xs;
+                    font-weight: bold;
                     > .navbar-status {
                         @apply inline-block border-2 border-solid rounded-full mr-1;
+                        
                         width: 12px;
                         height: 12px;
                     }

@@ -1,0 +1,25 @@
+.breadcrumb {
+    @apply flex flex-wrap px-4 py-3 mb-5 list-reset select-none;
+    li {
+        .svg-inline--fa {
+            @apply text-xs mr-2;
+        }
+        a {
+            @apply text-xs no-underline;
+        }
+        a.select {
+            @apply opacity-75 pointer-events-none;
+            &:hover {
+                color: $links-color;
+            }
+        }
+    }
+    li + li {
+        @apply pl-2;
+        &::before {
+            @apply hidden;
+            font-family: 'Font Awesome 5 Solid';
+            content: "\f105";
+        }
+    }
+}

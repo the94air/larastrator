@@ -27,3 +27,25 @@ $sidebar-line-color-hover: config('colors.grey');
 $sidebar-line-color-select: $sidebar-icons-color-hover;
 $sidebar-dropdowns-slide-transition-function: 100ms;
 $sidebar-dropdowns-slide-transition-duration: ease;
+
+// input
+//## input box ##
+$input-box-border-color: config('colors.grey-dark');
+//## input file ##
+$input-file-background-color: config('colors.grey-light');
+$input-file-background-color-hover: config('colors.grey-lighton');
+$input-file-color: $main-text-color;
+$input-file-transition-function: 100ms;
+$input-file-transition-duration: ease;
+//## input select ##
+$input-select-background-color: config('colors.white');
+$input-select-color: $main-text-color;
+$input-select-border-color: config('colors.grey-dark');
+//## input textarea ##
+$input-textarea-border-color: config('colors.grey-dark');
+//## input button ##
+$input-button-color: $main-text-color;
+$input-button-background-color: config('colors.grey-light');
+$input-button-background-color-hover: config('colors.grey-lighton');
+$input-button-transition-function: 100ms;
+$input-button-transition-duration: ease;

@@ -1,0 +1,104 @@
+.input {
+    @apply relative block w-full pb-2;
+    label {
+        @apply inline-block mb-2;
+        font-weight: bold;
+    }
+    input[type=color], input[type=date], input[type=datetime-local], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week] {
+        @apply block w-full py-2 px-2 mb-2 border border-solid rounded-sm;
+        border-color: $input-box-border-color;
+        -webkit-appearance: none;
+        &:focus {
+            @apply outline-none shadow-outline;
+        }
+    }
+    input[type=file] {
+        @apply absolute h-px w-px border-0 overflow-hidden p-0;
+        background: none;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        + label {
+            @apply inline-block rounded-sm select-none align-middle whitespace-no-wrap px-3 py-1 cursor-pointer;
+            background-color: $input-file-background-color;
+            color: $input-file-color;
+            transition: all $input-file-transition-duration $input-file-transition-function;
+            &:hover {
+                background-color: $input-file-background-color-hover;
+            }
+            &:focus {
+                @apply outline-none shadow-outline;
+            }
+        }
+    }
+    select:not([multiple]) {
+        @apply relative block w-full py-1 px-2 pr-5 mb-2 border border-solid rounded-sm;
+        border-color: $input-select-border-color;
+        background-color: $input-select-background-color;
+        color: $input-select-color;
+        background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='41' height='26' viewBox='0 0 41 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M0 5.382l19.983 19.983L40.14 5.208 34.932 0 19.869 15.062 4.84.032z' fill-rule='evenodd'/%3E%3C/svg%3E");
+        background-position: right .4rem center;
+        background-repeat: no-repeat;
+        background-size: .75rem;
+        -webkit-appearance: none;
+        &:focus {
+            @apply outline-none shadow-outline;
+        }
+    }
+    textarea {
+        @apply block w-full py-2 px-2 mb-2 border border-solid rounded-sm;
+        border-color: $input-textarea-border-color;
+        -webkit-appearance: none;
+        min-height: 100px;
+        &:focus {
+            @apply outline-none shadow-outline;
+        }
+    }
+    select[multiple] {
+        @apply relative block w-full py-1 px-0 mb-2 border border-solid rounded-sm;
+        border-color: $input-select-border-color;
+        background-color: $input-select-background-color;
+        color: $input-select-color;
+        -webkit-appearance: none;
+        min-height: 100px;
+        &:focus {
+            @apply outline-none shadow-outline;
+        }
+    }
+    button {
+        @apply inline-block text-center no-underline rounded-sm select-none align-middle whitespace-no-wrap px-4 py-2 cursor-pointer;
+        font-weight: bold;
+        color: $input-button-color;
+        background-color: $input-button-background-color;
+        transition: all $input-button-transition-duration $input-button-transition-function;
+        &:hover {
+            background: $input-button-background-color-hover;
+        }
+        &:focus {
+            @apply outline-none shadow-outline;
+        }
+    }
+}
+.checkbox {
+    @apply mb-4;
+    input[type=checkbox] {
+        &:focus {
+            @apply outline-none shadow-outline;
+        }
+    }
+}
+.checkbox-title {
+    @apply inline-block mb-2;
+    font-weight: bold;
+}
+.radio {
+    @apply mb-4;
+    input[type=radio] {
+        &:focus {
+            @apply outline-none shadow-outline;
+        }
+    }
+}
+.radio-title {
+    @apply inline-block mb-2;
+    font-weight: bold;
+}

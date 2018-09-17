@@ -1,7 +1,11 @@
 .panel {
-    @apply flex;
+    @apply flex -mx-2;
 }
 
 .panel-card {
-    @apply bg-white shadow rounded p-5 w-full;
+    @apply bg-white shadow rounded p-5 mb-5 w-full;
+}
+
+.panel-title {
+    @apply mb-5;
 }
