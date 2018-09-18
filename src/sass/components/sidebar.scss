@@ -1,10 +1,11 @@
 .sidebar {
-    @apply w-1/5 px-2 select-none;
+    @apply w-1/5 px-2;
     .sidebar-title {
         @apply text-base uppercase mb-5;
+        font-weight: 600;
     }
     .sidebar-menu {
-        @apply list-reset flex flex-col mb-5;
+        @apply list-reset flex flex-col mb-5 select-none;
         > .sidebar-item {
             > .sidebar-link {
                 @apply block flex flex-row no-underline p-2 px-0;

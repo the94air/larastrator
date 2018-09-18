@@ -1,0 +1,21 @@
+.paginate {
+    @apply flex justify-between;
+    .previous, .next {
+        .svg-inline--fa {
+            font-size: 0.85rem;
+        }
+    }
+    ul {
+        @apply flex list-reset;
+        li:not(:last-child) {
+            @apply mr-2;
+            span {
+                @apply block px-2 py-2;
+            }
+            .select {
+                @apply pointer-events-none;
+                box-shadow: 0px 2px 0 0px $pagination-selected-background;
+            }
+        }
+    }
+}

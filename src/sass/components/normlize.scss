@@ -10,6 +10,7 @@ body {
     margin-top: 9rem;
     @screen sm {
         margin-top: 7rem;
+        margin-bottom: 4rem;
     }
 }
 
@@ -38,4 +39,9 @@ a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
 
 a:not([href]):not([tabindex]):focus {
     outline: 0;
+}
+
+hr {
+    @apply h-px my-4;
+    background: $border-background-color;
 }

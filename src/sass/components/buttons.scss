@@ -1,0 +1,44 @@
+.btn, .paginate a {
+    @apply inline-block text-center no-underline rounded-sm select-none align-middle whitespace-no-wrap px-4 py-2 cursor-pointer;
+    font-weight: 600;
+    color: $button-color !important;
+    background-color: $button-background-color;
+    transform: scale(1);
+    transition: all $button-transition-duration $button-transition-function;
+    &:hover {
+        @apply no-underline;
+        background: $button-background-color-hover;
+        transform: scale(0.95);
+    }
+    &:focus {
+        @apply outline-none shadow-button;
+    }
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+a.success, button.success, [type="button"].success, [type="reset"].success, [type="submit"].success {
+    background-color: $success-button-background-color;
+    &:hover {
+        background: $success-button-background-color-hover;
+    }
+}
+a.danger, button.danger, [type="button"].danger, [type="reset"].danger, [type="submit"].danger {
+    background-color: $danger-button-background-color;
+    &:hover {
+        background: $danger-button-background-color-hover;
+    }
+}
+a.info, button.info, [type="button"].info, [type="reset"].info, [type="submit"].info {
+    background-color: $info-button-background-color;
+    &:hover {
+        background: $info-button-background-color-hover;
+    }
+}
+a.warning, button.warning, [type="button"].warning, [type="reset"].warning, [type="submit"].warning {
+    background-color: $warning-button-background-color;
+    &:hover {
+        background: $warning-button-background-color-hover;
+    }
+}

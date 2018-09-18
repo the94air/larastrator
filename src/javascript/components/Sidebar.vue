@@ -27,7 +27,7 @@
                 </a>
             </li>
             <li class="sidebar-item">
-                <a href="#" class="sidebar-link" @click="dropdown = !dropdown">
+                <a href="#" class="sidebar-link" @click.prevent="dropdown = !dropdown">
                     <span class="sidebar-link-icon">
                         <Fa :icon="['fas', 'cubes']" fixed-width />
                     </span>

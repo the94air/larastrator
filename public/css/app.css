@@ -675,6 +675,7 @@ body {
 @media (min-width: 576px) {
   body {
     margin-top: 7rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -707,6 +708,13 @@ a:not([href]):not([tabindex]):focus {
   outline: 0;
 }
 
+hr {
+  height: 1px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: #dae1e7;
+}
+
 .navbar {
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
@@ -722,6 +730,7 @@ a:not([href]):not([tabindex]):focus {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 30;
 }
 
 .navbar .navbar-main {
@@ -914,16 +923,13 @@ a:not([href]):not([tabindex]):focus {
   width: 20%;
   padding-left: .5rem;
   padding-right: .5rem;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 .sidebar .sidebar-title {
   font-size: 1rem;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
+  font-weight: 600;
 }
 
 .sidebar .sidebar-menu {
@@ -937,6 +943,10 @@ a:not([href]):not([tabindex]):focus {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 1.25rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .sidebar .sidebar-menu > .sidebar-item > .sidebar-link {
@@ -1062,12 +1072,8 @@ a:not([href]):not([tabindex]):focus {
 }
 
 .breadcrumb li a.select {
-  opacity: .75;
   pointer-events: none;
-}
-
-.breadcrumb li a.select:hover {
-  color: #606060;
+  color: #8795a1;
 }
 
 .breadcrumb li + li {
@@ -1090,7 +1096,7 @@ a:not([href]):not([tabindex]):focus {
 .input label {
   display: inline-block;
   margin-bottom: .5rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .input input[type=color],
@@ -1108,16 +1114,18 @@ a:not([href]):not([tabindex]):focus {
 .input input[type=week] {
   display: block;
   width: 100%;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
   padding-left: .5rem;
   padding-right: .5rem;
   margin-bottom: .5rem;
   border-width: 1px;
   border-style: solid;
   border-radius: .125rem;
-  border-color: #8795a1;
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+  border-color: #b6bec6;
   -webkit-appearance: none;
+  -webkit-transition: all ease 200ms;
+  transition: all ease 200ms;
 }
 
 .input input[type=color]:focus,
@@ -1167,26 +1175,34 @@ a:not([href]):not([tabindex]):focus {
   cursor: pointer;
   background-color: #dae1e7;
   color: #606060;
-  -webkit-transition: all ease 100ms;
-  transition: all ease 100ms;
+  font-weight: 600;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all ease 200ms;
+  transition: all ease 200ms;
 }
 
 .input input[type=file] + label:hover {
-  background-color: #e9eef2;
+  background-color: #e9eef1;
+  -webkit-transform: scale(.95);
+          transform: scale(.95);
 }
 
-.input input[type=file] + label:focus {
+.input input[type=file] + label:active {
+  -webkit-transform: scale(.9);
+          transform: scale(.9);
+}
+
+.input input[type=file]:focus + label {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
-          box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
+  -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+          box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
 }
 
 .input select:not([multiple]) {
   position: relative;
   display: block;
   width: 100%;
-  padding-top: .25rem;
-  padding-bottom: .25rem;
   padding-left: .5rem;
   padding-right: .5rem;
   padding-right: 1.25rem;
@@ -1194,7 +1210,9 @@ a:not([href]):not([tabindex]):focus {
   border-width: 1px;
   border-style: solid;
   border-radius: .125rem;
-  border-color: #8795a1;
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+  border-color: #b6bec6;
   background-color: #fff;
   color: #606060;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='41' height='26' viewBox='0 0 41 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M0 5.382l19.983 19.983L40.14 5.208 34.932 0 19.869 15.062 4.84.032z' fill-rule='evenodd'/%3E%3C/svg%3E");
@@ -1202,6 +1220,8 @@ a:not([href]):not([tabindex]):focus {
   background-repeat: no-repeat;
   background-size: .75rem;
   -webkit-appearance: none;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 .input select:not([multiple]):focus {
@@ -1213,17 +1233,19 @@ a:not([href]):not([tabindex]):focus {
 .input textarea {
   display: block;
   width: 100%;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
   padding-left: .5rem;
   padding-right: .5rem;
   margin-bottom: .5rem;
   border-width: 1px;
   border-style: solid;
   border-radius: .125rem;
-  border-color: #8795a1;
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+  border-color: #b6bec6;
   -webkit-appearance: none;
   min-height: 100px;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 .input textarea:focus {
@@ -1236,19 +1258,21 @@ a:not([href]):not([tabindex]):focus {
   position: relative;
   display: block;
   width: 100%;
-  padding-top: .25rem;
-  padding-bottom: .25rem;
   padding-left: 0;
   padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   margin-bottom: .5rem;
   border-width: 1px;
   border-style: solid;
   border-radius: .125rem;
-  border-color: #8795a1;
+  border-color: #b6bec6;
   background-color: #fff;
   color: #606060;
   -webkit-appearance: none;
   min-height: 100px;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 .input select[multiple]:focus {
@@ -1257,7 +1281,42 @@ a:not([href]):not([tabindex]):focus {
           box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
 }
 
-.input button {
+.input select[multiple]:focus option:checked {
+  background: #8795a1 -webkit-gradient(linear, left bottom, left top, from(#8795a1), to(#8795a1));
+  background: #8795a1 linear-gradient(0deg, #8795a1 0%, #8795a1 100%);
+  font-weight: bold;
+}
+
+.checkbox {
+  margin-bottom: .5rem;
+}
+
+.checkbox input[type=checkbox] {
+  margin-right: .25rem;
+}
+
+.checkbox-label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+.radio {
+  margin-bottom: .5rem;
+}
+
+.radio input[type=radio] {
+  margin-right: .25rem;
+}
+
+.radio-label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+.btn,
+.paginate a {
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -1273,53 +1332,184 @@ a:not([href]):not([tabindex]):focus {
   padding-top: .5rem;
   padding-bottom: .5rem;
   cursor: pointer;
-  font-weight: bold;
-  color: #606060;
+  font-weight: 600;
+  color: #606060 !important;
   background-color: #dae1e7;
-  -webkit-transition: all ease 100ms;
-  transition: all ease 100ms;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all ease 200ms;
+  transition: all ease 200ms;
 }
 
-.input button:hover {
-  background: #e9eef2;
+.btn:hover,
+.paginate a:hover {
+  text-decoration: none;
+  background: #e9eef1;
+  -webkit-transform: scale(.95);
+          transform: scale(.95);
 }
 
-.input button:focus {
+.btn:focus,
+.paginate a:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
-          box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
+  -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+          box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
 }
 
-.checkbox {
-  margin-bottom: 1rem;
+.btn:active,
+.paginate a:active {
+  -webkit-transform: scale(.9);
+          transform: scale(.9);
 }
 
-.checkbox input[type=checkbox]:focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
-          box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
+a.success,
+button.success,
+[type="button"].success,
+[type="reset"].success,
+[type="submit"].success {
+  background-color: #cbf2cf;
 }
 
-.checkbox-title {
-  display: inline-block;
-  margin-bottom: .5rem;
-  font-weight: bold;
+a.success:hover,
+button.success:hover,
+[type="button"].success:hover,
+[type="reset"].success:hover,
+[type="submit"].success:hover {
+  background: #dff7e2;
 }
 
-.radio {
-  margin-bottom: 1rem;
+a.danger,
+button.danger,
+[type="button"].danger,
+[type="reset"].danger,
+[type="submit"].danger {
+  background-color: #ffd0cd;
 }
 
-.radio input[type=radio]:focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
-          box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
+a.danger:hover,
+button.danger:hover,
+[type="button"].danger:hover,
+[type="reset"].danger:hover,
+[type="submit"].danger:hover {
+  background: #ffe8e7;
 }
 
-.radio-title {
-  display: inline-block;
-  margin-bottom: .5rem;
-  font-weight: bold;
+a.info,
+button.info,
+[type="button"].info,
+[type="reset"].info,
+[type="submit"].info {
+  background-color: #cef2f2;
+}
+
+a.info:hover,
+button.info:hover,
+[type="button"].info:hover,
+[type="reset"].info:hover,
+[type="submit"].info:hover {
+  background: #e2f7f7;
+}
+
+a.warning,
+button.warning,
+[type="button"].warning,
+[type="reset"].warning,
+[type="submit"].warning {
+  background-color: #ffe1c6;
+}
+
+a.warning:hover,
+button.warning:hover,
+[type="button"].warning:hover,
+[type="reset"].warning:hover,
+[type="submit"].warning:hover {
+  background: #ffeee0;
+}
+
+.paginate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.paginate .previous .svg-inline--fa,
+.paginate .next .svg-inline--fa {
+  font-size: .85rem;
+}
+
+.paginate ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.paginate ul li:not(:last-child) {
+  margin-right: .5rem;
+}
+
+.paginate ul li:not(:last-child) span {
+  display: block;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.paginate ul li:not(:last-child) .select {
+  pointer-events: none;
+  -webkit-box-shadow: 0px 2px 0 0px #8795a1;
+          box-shadow: 0px 2px 0 0px #8795a1;
+}
+
+.notifications {
+  bottom: 1rem !important;
+  right: 1rem !important;
+  width: auto !important;
+  max-width: 270px !important;
+}
+
+@media (min-width: 576px) {
+  .notifications {
+    max-width: 320px !important;
+  }
+}
+
+.notification {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: .5rem;
+  border-radius: .125rem;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  background: #22292f !important;
+  color: #fff;
+  -webkit-box-shadow: 0 0px 8px black !important;
+          box-shadow: 0 0px 8px black !important;
+}
+
+.notification .close {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.notification .close:hover,
+.notification .close:focus {
+  margin-left: 1rem;
+  cursor: pointer;
+  opacity: .75;
 }
 
 .list-reset {
@@ -5704,6 +5894,11 @@ a:not([href]):not([tabindex]):focus {
           box-shadow: none;
 }
 
+.shadow-button {
+  -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+          box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+}
+
 .hover\:shadow:hover {
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
@@ -5734,6 +5929,11 @@ a:not([href]):not([tabindex]):focus {
           box-shadow: none;
 }
 
+.hover\:shadow-button:hover {
+  -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+          box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+}
+
 .focus\:shadow:focus {
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
@@ -5762,6 +5962,11 @@ a:not([href]):not([tabindex]):focus {
 .focus\:shadow-none:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.focus\:shadow-button:focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+          box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
 }
 
 .fill-current {
@@ -11613,6 +11818,11 @@ a:not([href]):not([tabindex]):focus {
             box-shadow: none;
   }
 
+  .sm\:shadow-button {
+    -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+  }
+
   .sm\:hover\:shadow:hover {
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
@@ -11643,6 +11853,11 @@ a:not([href]):not([tabindex]):focus {
             box-shadow: none;
   }
 
+  .sm\:hover\:shadow-button:hover {
+    -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+  }
+
   .sm\:focus\:shadow:focus {
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
@@ -11671,6 +11886,11 @@ a:not([href]):not([tabindex]):focus {
   .sm\:focus\:shadow-none:focus {
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+
+  .sm\:focus\:shadow-button:focus {
+    -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
   }
 
   .sm\:table-auto {
@@ -17515,6 +17735,11 @@ a:not([href]):not([tabindex]):focus {
             box-shadow: none;
   }
 
+  .md\:shadow-button {
+    -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+  }
+
   .md\:hover\:shadow:hover {
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
@@ -17545,6 +17770,11 @@ a:not([href]):not([tabindex]):focus {
             box-shadow: none;
   }
 
+  .md\:hover\:shadow-button:hover {
+    -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+  }
+
   .md\:focus\:shadow:focus {
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
@@ -17573,6 +17803,11 @@ a:not([href]):not([tabindex]):focus {
   .md\:focus\:shadow-none:focus {
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+
+  .md\:focus\:shadow-button:focus {
+    -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
   }
 
   .md\:table-auto {
@@ -23417,6 +23652,11 @@ a:not([href]):not([tabindex]):focus {
             box-shadow: none;
   }
 
+  .lg\:shadow-button {
+    -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+  }
+
   .lg\:hover\:shadow:hover {
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
@@ -23447,6 +23687,11 @@ a:not([href]):not([tabindex]):focus {
             box-shadow: none;
   }
 
+  .lg\:hover\:shadow-button:hover {
+    -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+  }
+
   .lg\:focus\:shadow:focus {
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
@@ -23475,6 +23720,11 @@ a:not([href]):not([tabindex]):focus {
   .lg\:focus\:shadow-none:focus {
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+
+  .lg\:focus\:shadow-button:focus {
+    -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
   }
 
   .lg\:table-auto {
@@ -29319,6 +29569,11 @@ a:not([href]):not([tabindex]):focus {
             box-shadow: none;
   }
 
+  .xl\:shadow-button {
+    -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+  }
+
   .xl\:hover\:shadow:hover {
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
@@ -29349,6 +29604,11 @@ a:not([href]):not([tabindex]):focus {
             box-shadow: none;
   }
 
+  .xl\:hover\:shadow-button:hover {
+    -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+  }
+
   .xl\:focus\:shadow:focus {
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
@@ -29377,6 +29637,11 @@ a:not([href]):not([tabindex]):focus {
   .xl\:focus\:shadow-none:focus {
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+
+  .xl\:focus\:shadow-button:focus {
+    -webkit-box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
   }
 
   .xl\:table-auto {

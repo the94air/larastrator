@@ -3,139 +3,79 @@
         <Breadcrumb />
         <h1 class="panel-title">Page title</h1>
         <div class="panel-card">
-            <form>
-                <div class="flex -mx-2">
-                    <div class="w-1/2 px-2">
-                        <div class="input">
-                            <label for="full_name">Full name</label>
-                            <input type="text" id="full_name">
-                        </div>
-                    </div>
-                    <div class="w-1/2 px-2">
-                        <div class="input">
-                            <label for="email">Email</label>
-                            <input type="email" id="email">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="w-full">
-                        <div class="flex">
-                            <div class="w-full">
-                                <label class="checkbox-title">Gender</label>
-                            </div>
-                        </div>
-                        <div class="flex -mx-2">
-                            <div class="w-1/2 px-2">
-                                <div class="radio">
-                                    <input type="radio" name="gender" id="male">
-                                    <label for="male">Male</label>
-                                </div>
-                            </div>
-                            <div class="w-1/2 px-2">
-                                <div class="radio">
-                                    <input type="radio" name="gender" id="female">
-                                    <label for="female">Female</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="w-full">
-                        <div class="flex">
-                            <div class="w-full">
-                                <label class="radio-title">Your hobbies</label>
-                            </div>
-                        </div>
-                        <div class="flex -mx-2">
-                            <div class="w-1/2 px-2">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="basketball">
-                                    <label for="basketball">Basketball</label>
-                                </div>
-                            </div>
-                            <div class="w-1/2 px-2">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="football">
-                                    <label for="football">Football</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex -mx-2">
-                            <div class="w-1/2 px-2">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="tennis">
-                                    <label for="tennis">Tennis</label>
-                                </div>
-                            </div>
-                            <div class="w-1/2 px-2">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="golf">
-                                    <label for="golf">Golf</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex -mx-2">
-                    <div class="w-1/2 px-2">
-                        <div class="input">
-                            <label>Profile image</label>
-                            <div class="file">
-                                <input type="file" id="profile_image">
-                                <label for="profile_image">Choose file</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-1/2 px-2">
-                        <div class="input">
-                            <label for="country">Country</label>
-                            <select id="country">
-                                <option value="">Select an option</option>
-                                <option value="america">U.S. of america</option>
-                                <option value="unitedkingdom">United Kingdom</option>
-                                <option value="japan">Japan</option>
-                                <option value="china">China</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex -mx-2">
-                    <div class="w-1/2 px-2">
-                        <div class="input">
-                            <label for="bio">Tell us more about you</label>
-                            <textarea id="bio"></textarea>
-                        </div>
-                    </div>
-                    <div class="w-1/2 px-2">
-                        <div class="input">
-                            <label for="favorite_fruit">What's your favorite fruit?</label>
-                            <select id="favorite_fruit" multiple>
-                                <option value="banana">Banana</option>
-                                <option value="mango">Mango</option>
-                                <option value="apple">Apple</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="w-full">
-                        <div class="input">
-                            <button @click="(e) => {e.preventDefault();}">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+            <HorizontalForm />
         </div>
-        <div class="panel-card"></div>
+        <div class="panel-card">
+            <VerticalForm />
+            <hr>
+            <nav class="paginate">
+                <a class="previous" href="#"><Fa :icon="['fas', 'arrow-left']" /> Prev</a>
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><span>&hellip;</span></li>
+                    <li><a href="#">6</a></li>
+                    <li><a class="select">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><span>&hellip;</span></li>
+                    <li><a href="#">12</a></li>
+                    <li><a href="#">13</a></li>
+                </ul>
+                <a class="next" href="#">Next <Fa :icon="['fas', 'arrow-right']" /></a>
+            </nav>
+        </div>
+        <div class="w-full">
+            <div class="flex justify-between text-center my-10">
+                <div>
+                    <button class="btn" @click="notify">Show a notification</button>
+                </div>
+                <div >
+                    <button class="btn success">Button</button>
+                </div>
+                <div >
+                    <button class="btn danger">Button</button>
+                </div>
+                <div >
+                    <button class="btn info">Button</button>
+                </div>
+                <div>
+                    <button class="btn warning">Button</button>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
     import Breadcrumb from './Breadcrumb';
+    import HorizontalForm from './HorizontalForm';
+    import VerticalForm from './VerticalForm';
 
     export default {
-        components: { Breadcrumb }
+        data() {
+            return {
+                inputFileDefault: 'Choose file',
+                inputFileName: 'Choose file',
+                num: 1,
+            };
+        },
+        components: { Breadcrumb, HorizontalForm, VerticalForm },
+        methods: {
+            showFileName(e) {
+                if(e.target.value != "") {
+                    this.inputFileName = e.target.value.split(/(\\|\/)/g).pop();
+                } else {
+                    this.inputFileName = this.inputFileDefault;
+                }
+            },
+            notify() {
+                this.num = this.num * 10;
+                this.$notify({
+                    group: 'notes',
+                    text: 'Your new post saved ' + this.num,
+                    duration: 5000,
+                });
+            }
+        }
     }
 </script>

@@ -28,24 +28,55 @@ $sidebar-line-color-select: $sidebar-icons-color-hover;
 $sidebar-dropdowns-slide-transition-function: 100ms;
 $sidebar-dropdowns-slide-transition-duration: ease;
 
-// input
+// Inputs
 //## input box ##
-$input-box-border-color: config('colors.grey-dark');
+$input-box-border-color: config('colors.grey-semi-light');
+$input-box-transition-function: 200ms;
+$input-box-transition-duration: ease;
 //## input file ##
-$input-file-background-color: config('colors.grey-light');
-$input-file-background-color-hover: config('colors.grey-lighton');
+$input-file-background-color: #dae1e7;
+$input-file-background-color-hover: lighten(#dae1e7, 5%);
 $input-file-color: $main-text-color;
-$input-file-transition-function: 100ms;
+$input-file-transition-function: 200ms;
 $input-file-transition-duration: ease;
 //## input select ##
 $input-select-background-color: config('colors.white');
 $input-select-color: $main-text-color;
-$input-select-border-color: config('colors.grey-dark');
+$input-select-border-color: config('colors.grey-semi-light');
+$input-select-multiple-selected-background-color: config('colors.grey-dark');
+$input-select-transition-duration: 200ms;
+$input-select-transition-function: ease;
 //## input textarea ##
-$input-textarea-border-color: config('colors.grey-dark');
-//## input button ##
-$input-button-color: $main-text-color;
-$input-button-background-color: config('colors.grey-light');
-$input-button-background-color-hover: config('colors.grey-lighton');
-$input-button-transition-function: 100ms;
-$input-button-transition-duration: ease;
+$input-textarea-border-color: config('colors.grey-semi-light');
+$input-textarea-transition-duration: 200ms;
+$input-textarea-transition-function: ease;
+
+// Buttons
+$button-color: $main-text-color;
+$button-background-color: #dae1e7;
+$button-background-color-hover: lighten(#dae1e7, 5%);
+$button-transition-function: 200ms;
+$button-transition-duration: ease;
+
+$success-button-background-color: #cbf2cf;
+$success-button-background-color-hover: lighten(#cbf2cf, 5%);
+
+$danger-button-background-color: #ffd0cd;
+$danger-button-background-color-hover: lighten(#ffd0cd, 5%);
+
+$info-button-background-color: #cef2f2;
+$info-button-background-color-hover: lighten(#cef2f2, 5%);
+
+$warning-button-background-color: #ffe1c6;
+$warning-button-background-color-hover: lighten(#ffe1c6, 5%);
+
+// Horizonal rule
+$border-background-color: config('colors.grey-light');
+
+// Pagination
+$pagination-selected-background: config('colors.grey-dark');
+
+// Notification
+$notification-background-color: config('colors.black');
+$notification-color: config('colors.white');
+$notification-shadow: 0 0px 8px black;

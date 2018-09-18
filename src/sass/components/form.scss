@@ -2,12 +2,15 @@
     @apply relative block w-full pb-2;
     label {
         @apply inline-block mb-2;
-        font-weight: bold;
+        font-weight: 600;
     }
     input[type=color], input[type=date], input[type=datetime-local], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week] {
-        @apply block w-full py-2 px-2 mb-2 border border-solid rounded-sm;
+        @apply block w-full px-2 mb-2 border border-solid rounded-sm;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
         border-color: $input-box-border-color;
         -webkit-appearance: none;
+        transition: all $input-box-transition-duration $input-box-transition-function;
         &:focus {
             @apply outline-none shadow-outline;
         }
@@ -21,17 +24,27 @@
             @apply inline-block rounded-sm select-none align-middle whitespace-no-wrap px-3 py-1 cursor-pointer;
             background-color: $input-file-background-color;
             color: $input-file-color;
+            font-weight: 600;
+            transform: scale(1);
             transition: all $input-file-transition-duration $input-file-transition-function;
             &:hover {
                 background-color: $input-file-background-color-hover;
+                transform: scale(0.95);
             }
-            &:focus {
-                @apply outline-none shadow-outline;
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+        &:focus {
+            + label {
+                @apply outline-none shadow-button;
             }
         }
     }
     select:not([multiple]) {
-        @apply relative block w-full py-1 px-2 pr-5 mb-2 border border-solid rounded-sm;
+        @apply relative block w-full px-2 pr-5 mb-2 border border-solid rounded-sm;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
         border-color: $input-select-border-color;
         background-color: $input-select-background-color;
         color: $input-select-color;
@@ -40,65 +53,57 @@
         background-repeat: no-repeat;
         background-size: .75rem;
         -webkit-appearance: none;
+        transition: all $input-select-transition-duration $input-select-transition-function;
         &:focus {
             @apply outline-none shadow-outline;
         }
     }
     textarea {
-        @apply block w-full py-2 px-2 mb-2 border border-solid rounded-sm;
+        @apply block w-full px-2 mb-2 border border-solid rounded-sm;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
         border-color: $input-textarea-border-color;
         -webkit-appearance: none;
         min-height: 100px;
+        transition: all $input-textarea-transition-duration $input-textarea-transition-function;
         &:focus {
             @apply outline-none shadow-outline;
         }
     }
     select[multiple] {
-        @apply relative block w-full py-1 px-0 mb-2 border border-solid rounded-sm;
+        @apply relative block w-full px-0 py-0 mb-2 border border-solid rounded-sm;
         border-color: $input-select-border-color;
         background-color: $input-select-background-color;
         color: $input-select-color;
         -webkit-appearance: none;
         min-height: 100px;
+        transition: all $input-select-transition-duration $input-select-transition-function;
         &:focus {
             @apply outline-none shadow-outline;
-        }
-    }
-    button {
-        @apply inline-block text-center no-underline rounded-sm select-none align-middle whitespace-no-wrap px-4 py-2 cursor-pointer;
-        font-weight: bold;
-        color: $input-button-color;
-        background-color: $input-button-background-color;
-        transition: all $input-button-transition-duration $input-button-transition-function;
-        &:hover {
-            background: $input-button-background-color-hover;
-        }
-        &:focus {
-            @apply outline-none shadow-outline;
+            option:checked {
+                background: $input-select-multiple-selected-background-color linear-gradient(0deg, $input-select-multiple-selected-background-color 0%, $input-select-multiple-selected-background-color 100%);
+                font-weight: bold;
+            }
         }
     }
 }
 .checkbox {
-    @apply mb-4;
+    @apply mb-2;
     input[type=checkbox] {
-        &:focus {
-            @apply outline-none shadow-outline;
-        }
+        @apply mr-1;
     }
 }
-.checkbox-title {
+.checkbox-label {
     @apply inline-block mb-2;
-    font-weight: bold;
+    font-weight: 600;
 }
 .radio {
-    @apply mb-4;
+    @apply mb-2;
     input[type=radio] {
-        &:focus {
-            @apply outline-none shadow-outline;
-        }
+        @apply mr-1;
     }
 }
-.radio-title {
+.radio-label {
     @apply inline-block mb-2;
-    font-weight: bold;
+    font-weight: 600;
 }

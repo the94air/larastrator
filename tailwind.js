@@ -759,6 +759,7 @@ module.exports = {
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
     'outline': '0 0 0 3px rgba(201, 210, 218, 0.5)',
     'none': 'none',
+    'button': '0 0 0 2px rgba(33, 150, 243, 0.3)',
   },
 
 

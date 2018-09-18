@@ -8,10 +8,8 @@
             @apply text-xs no-underline;
         }
         a.select {
-            @apply opacity-75 pointer-events-none;
-            &:hover {
-                color: $links-color;
-            }
+            @apply pointer-events-none;
+            color: $links-color-hover;
         }
     }
     li + li {
