@@ -14,7 +14,8 @@
             }
             .select {
                 @apply pointer-events-none;
-                box-shadow: 0px 2px 0 0px $pagination-selected-background;
+                transform: scale(.9);
+                background: $pagination-selected-background;
             }
         }
     }

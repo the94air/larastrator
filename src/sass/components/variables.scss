@@ -1,9 +1,12 @@
 // Fonts
-$main-font-family: 'Source Sans Pro', sans;
+$main-font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $main-text-color: config('colors.grey-darken');
 
 // body
 $body-background-color: config('colors.grey-lighten');
+
+// Selection
+$selection-background-color: config('colors.grey-light');
 
 // Navbar
 $navbar-background: config('colors.white');
@@ -71,12 +74,38 @@ $warning-button-background-color: #ffe1c6;
 $warning-button-background-color-hover: lighten(#ffe1c6, 5%);
 
 // Horizonal rule
-$border-background-color: config('colors.grey-light');
+$horizonal-rule-background-color: config('colors.grey-light');
 
 // Pagination
-$pagination-selected-background: config('colors.grey-dark');
+$pagination-selected-background: darken(#dae1e7, 10%);
 
 // Notification
 $notification-background-color: config('colors.black');
 $notification-color: config('colors.white');
 $notification-shadow: 0 0px 8px black;
+
+// Alerts
+$success-alert-icon-color: #cbf2cf;
+$success-alert-border-top-color: darken(#cbf2cf, 15%);
+$success-alert-title-color: darken(#cbf2cf, 15%);
+
+$danger-alert-icon-color: #ffd0cd;
+$danger-alert-border-top-color: darken(#ffd0cd, 15%);
+$danger-alert-title-color: darken(#ffd0cd, 15%);
+
+$info-alert-icon-color: #cef2f2;
+$info-alert-border-top-color: darken(#cef2f2, 15%);
+$info-alert-title-color: darken(#cef2f2, 15%);
+
+$warning-alert-icon-color: #ffe1c6;
+$warning-alert-border-top-color: darken(#ffe1c6, 15%);
+$warning-alert-title-color: darken(#ffe1c6, 15%);
+
+// Table
+$table-background-color: config('colors.grey-lighter');
+$table-border-radius: 0.25em;
+$table-header-and-footer-color: config('colors.grey-darker');
+$table-header-and-footer-border-color: config('colors.grey');
+$table-body-color: config('colors.grey-darker');
+$table-row-border-color: config('colors.grey');
+$table-header-and-footer-background-color: config('colors.grey-lighton');

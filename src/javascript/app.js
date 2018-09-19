@@ -2,7 +2,9 @@ import Vue from 'vue';
 import Notifications from 'vue-notification';
 import { dom, config, library } from '@fortawesome/fontawesome-svg-core';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
-import { faHome, faUser, faUsers, faCubes, faAngleRight, faArrowRight, faArrowLeft, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUser, faUsers, faCubes, faAngleRight, faArrowRight,
+         faArrowLeft, faTimes, faCheckCircle, faExclamationTriangle,
+         faInfoCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './components/App';
 
@@ -12,7 +14,9 @@ config.searchPseudoElements = true;
 
 dom.watch();
 
-library.add(faBell, faHome, faUser, faUsers, faCubes, faAngleRight, faArrowRight, faArrowLeft, faTimes);
+library.add(faBell, faHome, faUser, faUsers, faCubes, faAngleRight,
+            faArrowRight, faArrowLeft, faTimes, faCheckCircle, faExclamationTriangle,
+            faInfoCircle, faExclamationCircle);
 
 Vue.component('Fa', FontAwesomeIcon);
 

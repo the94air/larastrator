@@ -14,6 +14,11 @@ body {
     }
 }
 
+::selection {
+    background: $selection-background-color;
+    text-shadow: none;
+}
+
 a {
     color: $links-color;
     text-decoration: none;
@@ -43,5 +48,5 @@ a:not([href]):not([tabindex]):focus {
 
 hr {
     @apply h-px my-4;
-    background: $border-background-color;
+    background: $horizonal-rule-background-color;
 }

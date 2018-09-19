@@ -16,4 +16,7 @@
 13. Create the pagination.
 14. Install 'vue-notification' for showing fast notes.
 14. Create custom 'vue-notification' template.
-15. Create notification component.
+15. Create the notifications component.
+16. Create the alerts component.
+17. Create the table compoenent.
+18. Install 'vue-good-table' for making vuejs datatables.

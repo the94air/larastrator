@@ -117,7 +117,7 @@
         </div>
         <div class="flex">
             <div class="w-full">
-                <button type="submit" class="btn">Submit</button>
+                <button type="submit" class="button">Submit</button>
             </div>
         </div>
     </form>

@@ -133,7 +133,7 @@
         </div>
         <div class="flex -mx-2">
             <div class="ml-auto w-2/3 px-2">
-                <button type="submit" class="btn">Submit</button>
+                <button type="submit" class="button">Submit</button>
             </div>
         </div>
     </form>

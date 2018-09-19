@@ -5,7 +5,7 @@
         font-weight: 600;
     }
     input[type=color], input[type=date], input[type=datetime-local], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week] {
-        @apply block w-full px-2 mb-2 border border-solid rounded-sm;
+        @apply block w-full px-2 mb-2 leading-tight border border-solid rounded-sm;
         padding-top: .4rem;
         padding-bottom: .4rem;
         border-color: $input-box-border-color;
@@ -42,7 +42,7 @@
         }
     }
     select:not([multiple]) {
-        @apply relative block w-full px-2 pr-5 mb-2 border border-solid rounded-sm;
+        @apply relative block w-full px-2 pr-5 mb-2 leading-tight border border-solid rounded-sm;
         padding-top: .4rem;
         padding-bottom: .4rem;
         border-color: $input-select-border-color;
@@ -59,19 +59,19 @@
         }
     }
     textarea {
-        @apply block w-full px-2 mb-2 border border-solid rounded-sm;
+        @apply block w-full px-2 mb-2 leading-tight border border-solid rounded-sm;
         padding-top: .4rem;
         padding-bottom: .4rem;
         border-color: $input-textarea-border-color;
         -webkit-appearance: none;
         min-height: 100px;
-        transition: all $input-textarea-transition-duration $input-textarea-transition-function;
+        transition: box-shadow $input-textarea-transition-duration $input-textarea-transition-function;
         &:focus {
             @apply outline-none shadow-outline;
         }
     }
     select[multiple] {
-        @apply relative block w-full px-0 py-0 mb-2 border border-solid rounded-sm;
+        @apply relative block w-full px-0 py-0 mb-2 leading-tight border border-solid rounded-sm;
         border-color: $input-select-border-color;
         background-color: $input-select-background-color;
         color: $input-select-color;
@@ -82,7 +82,7 @@
             @apply outline-none shadow-outline;
             option:checked {
                 background: $input-select-multiple-selected-background-color linear-gradient(0deg, $input-select-multiple-selected-background-color 0%, $input-select-multiple-selected-background-color 100%);
-                font-weight: bold;
+                font-weight: 600;
             }
         }
     }
@@ -90,7 +90,7 @@
 .checkbox {
     @apply mb-2;
     input[type=checkbox] {
-        @apply mr-1;
+        @apply mr-1 leading-tight;
     }
 }
 .checkbox-label {
@@ -100,7 +100,7 @@
 .radio {
     @apply mb-2;
     input[type=radio] {
-        @apply mr-1;
+        @apply mr-1 leading-tight;
     }
 }
 .radio-label {

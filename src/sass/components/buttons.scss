@@ -1,5 +1,5 @@
-.btn, .paginate a {
-    @apply inline-block text-center no-underline rounded-sm select-none align-middle whitespace-no-wrap px-4 py-2 cursor-pointer;
+.button, .paginate a {
+    @apply inline-block text-center no-underline rounded-sm select-none align-middle whitespace-no-wrap px-4 py-2 leading-tight cursor-pointer;
     font-weight: 600;
     color: $button-color !important;
     background-color: $button-background-color;
