@@ -31,11 +31,15 @@
                 selectionText: 'rows selected',
                 clearSelectionText: 'clear',
             }"
+            @on-row-click="onRowClick"
         >
             <div slot="table-actions">
                 <button class="button success">Completed</button>
                 <button class="button warning">Pending</button>
-                <button class="button danger">New</button>
+                <button class="button danger">Rejected</button>
+            </div>
+            <div slot="emptystate">
+                No data for table!
             </div>
         </DataTable>
     </div>
@@ -49,9 +53,9 @@
             return {
                 columns: [
                     { label: 'Name', field: 'name' },
-                    { label: 'Age', field: 'age', type: 'number' },
-                    { label: 'Created On', field: 'createdAt', type: 'date', dateInputFormat: 'YYYY-MM-DD', dateOutputFormat: 'MMM Do YY' },
-                    { label: 'Percent', field: 'score', type: 'percentage' },
+                    { label: 'Age', field: 'age' },
+                    { label: 'Created On', field: 'createdAt', dateInputFormat: 'YYYY-MM-DD', dateOutputFormat: 'MMM Do YY' },
+                    { label: 'Percent', field: 'score' },
                 ],
                 rows: [
                     { id:1, name:"John", age: 20, createdAt: '201-10-31:9: 35 am',score: 0.03343 },
@@ -64,5 +68,10 @@
             };
         },
         components: { DataTable },
+        methods: {
+            onRowClick(params) {
+                console.log('Clicked!');
+            }
+        }
     }
 </script>

@@ -109,3 +109,10 @@ $table-header-and-footer-border-color: config('colors.grey');
 $table-body-color: config('colors.grey-darker');
 $table-row-border-color: config('colors.grey');
 $table-header-and-footer-background-color: config('colors.grey-lighton');
+
+// Datatable
+$datatable-text-disabled: #909399;
+$datatable-background-color: config('colors.grey-lighter');
+$datatable-body-color: config('colors.grey-darker');
+$datatable-row-border-color: config('colors.grey');
+$datatable-clickable-row-hover-background-color: config('colors.grey-light');

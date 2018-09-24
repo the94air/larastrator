@@ -1,25 +1,34 @@
 table.vgt-table{
-  &.vgt-fixed-header{
-    position: absolute;
-    z-index: 10;
-  }
-  font-size: 16px;
-  border-collapse: collapse;
-  background-color: white;
-  width: 100%;
-  max-width: 100%;
-  table-layout: auto;
-  border: 1px solid $border-color;
-  & td {
-    padding: .75em .75em .75em .75em;
-    vertical-align: top;
-    border-bottom:  1px solid $border-color;
-    color: $text-color;
-  }
-  & tr.clickable {
-    cursor: pointer;
-    &:hover{
-      background-color: $highlight-color;
+	@apply border-collapse w-full max-w-full table-auto my-5;
+	background-color: $datatable-background-color;
+	border-radius: $table-border-radius;
+	&.vgt-fixed-header {
+		@apply absolute z-10;
+	}
+	& td {
+		@apply py-2 px-4 align-top;
+	  	border-bottom:  1px solid $datatable-row-border-color;
+	  	color: $datatable-body-color;
+	}
+	& tr:last-child td {
+        border-bottom: none;
     }
-  }
+	& tr.clickable {
+		@apply cursor-pointer;
+	  	&:hover {
+	    	background-color: $datatable-clickable-row-hover-background-color;
+	  	}
+	}
+	tr:first-child th:first-child {
+        border-top-left-radius: $table-border-radius;
+    }
+    tr:first-child th:last-child {
+        border-top-right-radius: $table-border-radius;
+    }
+    tr:last-child td:last-child {
+        border-bottom-right-radius: $table-border-radius;
+    }
+    tr:last-child td {
+        border-bottom: none;
+    }
 }
