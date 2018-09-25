@@ -1,25 +1,35 @@
+.vgt-input {
+	@apply block w-full px-2 leading-tight border border-solid rounded-sm;
+	font-size: 0.8rem;
+	padding-top: .4rem;
+	padding-bottom: .4rem;
+	border-color: $input-box-border-color;
+	-webkit-appearance: none;
+	box-sizing: border-box;
+	transition: all $input-box-transition-duration $input-box-transition-function;
+	&::placeholder {
+		opacity: 0.3;
+	}
+	&:focus {
+		@apply outline-none shadow-outline;
+	}
+}
 
-.vgt-input, .vgt-select{
-  width: 100%;
-  height: 32px;
-  line-height: 1;
-  display: block;
-  font-size: 14px;
-  font-weight: regular;
-  padding: 6px 12px;
-  color: $text-color;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-image: none;
-  background-color: #fff;
-  border: 1px solid $input-border-color;
-  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
-  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: $text-color;
-    opacity: 0.3; /* Firefox */
-  }
-  &:focus{
-    outline: none;
-    border-color: $link-color;
-  }
+.vgt-select /* , .footer__row-count__select */ {
+	@apply relative block w-full px-2 pr-5 leading-tight border border-solid rounded-sm;
+	font-size: 0.8rem;
+	padding-top: .4rem;
+	padding-bottom: .4rem;
+	border-color: $input-select-border-color;
+	background-color: $input-select-background-color;
+	color: $input-select-color;
+	background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='41' height='26' viewBox='0 0 41 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M0 5.382l19.983 19.983L40.14 5.208 34.932 0 19.869 15.062 4.84.032z' fill-rule='evenodd'/%3E%3C/svg%3E");
+	background-position: right .4rem center;
+	background-repeat: no-repeat;
+	background-size: .75rem;
+	-webkit-appearance: none;
+	transition: all $input-select-transition-duration $input-select-transition-function;
+	&:focus {
+		@apply outline-none shadow-outline;
+	}
 }

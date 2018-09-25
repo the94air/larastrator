@@ -15982,7 +15982,7 @@ __WEBPACK_IMPORTED_MODULE_2__fortawesome_fontawesome_svg_core__["config"].search
 
 __WEBPACK_IMPORTED_MODULE_2__fortawesome_fontawesome_svg_core__["dom"].watch();
 
-__WEBPACK_IMPORTED_MODULE_2__fortawesome_fontawesome_svg_core__["library"].add(__WEBPACK_IMPORTED_MODULE_3__fortawesome_free_regular_svg_icons__["a" /* faBell */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["j" /* faHome */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["m" /* faUser */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["n" /* faUsers */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["g" /* faCubes */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["a" /* faAngleRight */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["d" /* faArrowRight */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["c" /* faArrowLeft */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["l" /* faTimes */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["f" /* faCheckCircle */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["i" /* faExclamationTriangle */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["k" /* faInfoCircle */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["h" /* faExclamationCircle */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["b" /* faArrowDown */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["e" /* faArrowUp */]);
+__WEBPACK_IMPORTED_MODULE_2__fortawesome_fontawesome_svg_core__["library"].add(__WEBPACK_IMPORTED_MODULE_3__fortawesome_free_regular_svg_icons__["c" /* faBell */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["j" /* faHome */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["m" /* faUser */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["n" /* faUsers */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["g" /* faCubes */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["a" /* faAngleRight */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["d" /* faArrowRight */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["c" /* faArrowLeft */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["l" /* faTimes */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["f" /* faCheckCircle */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["i" /* faExclamationTriangle */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["k" /* faInfoCircle */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["h" /* faExclamationCircle */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["b" /* faArrowDown */], __WEBPACK_IMPORTED_MODULE_4__fortawesome_free_solid_svg_icons__["e" /* faArrowUp */], __WEBPACK_IMPORTED_MODULE_3__fortawesome_free_regular_svg_icons__["b" /* faArrowAltCircleRight */], __WEBPACK_IMPORTED_MODULE_3__fortawesome_free_regular_svg_icons__["a" /* faArrowAltCircleLeft */]);
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('Fa', __WEBPACK_IMPORTED_MODULE_5__fortawesome_vue_fontawesome__["FontAwesomeIcon"]);
 
@@ -17583,10 +17583,10 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_20__;
 /* unused harmony export faAddressCard */
 /* unused harmony export faAngry */
 /* unused harmony export faArrowAltCircleDown */
-/* unused harmony export faArrowAltCircleLeft */
-/* unused harmony export faArrowAltCircleRight */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return faArrowAltCircleLeft; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return faArrowAltCircleRight; });
 /* unused harmony export faArrowAltCircleUp */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return faBell; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return faBell; });
 /* unused harmony export faBellSlash */
 /* unused harmony export faBookmark */
 /* unused harmony export faBuilding */
@@ -23546,14 +23546,43 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
+
+var btn = '\n      <div class="action">\n          <button class="button info">Open</button>\n          <button class="button success">Edit</button>\n          <button class="button danger">Delete</button>\n      </div>\n  ';
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            columns: [{ label: 'Name', field: 'name' }, { label: 'Age', field: 'age' }, { label: 'Created On', field: 'createdAt', dateInputFormat: 'YYYY-MM-DD', dateOutputFormat: 'MMM Do YY' }, { label: 'Percent', field: 'score' }],
-            rows: [{ id: 1, name: "John", age: 20, createdAt: '201-10-31:9: 35 am', score: 0.03343 }, { id: 2, name: "Jane", age: 24, createdAt: '2011-10-31', score: 0.03343 }, { id: 3, name: "Susan", age: 16, createdAt: '2011-10-30', score: 0.03343 }, { id: 4, name: "Chris", age: 55, createdAt: '2011-10-11', score: 0.03343 }, { id: 5, name: "Dan", age: 40, createdAt: '2011-10-21', score: 0.03343 }, { id: 6, name: "John", age: 20, createdAt: '2011-10-31', score: 0.03343 }]
+            columns: [{ label: 'Name', field: 'name', filterOptions: {
+                    enabled: false, // enable filter for this column
+                    placeholder: 'Filter This Thing', // placeholder for filter input
+                    filterDropdownItems: [] // dropdown (with selected values) instead of text input
+                } }, { label: 'Age', field: 'age' }, { label: 'Created On', field: 'createdAt', dateInputFormat: 'YYYY-MM-DD', dateOutputFormat: 'MMM Do YY' }, { label: 'Percent', field: 'score' }, { label: 'Action', field: 'btn', html: true }],
+            rows: [{ id: 1, name: "John", age: 20, createdAt: '201-10-31:9: 35 am', score: 0.03343, btn: btn }, { id: 2, name: "Jane", age: 24, createdAt: '2011-10-31', score: 0.03343, btn: btn }, { id: 3, name: "Susan", age: 16, createdAt: '2011-10-30', score: 0.03343, btn: btn }, { id: 4, name: "Chris", age: 55, createdAt: '2011-10-11', score: 0.03343, btn: btn }, { id: 5, name: "Dan", age: 40, createdAt: '2011-10-21', score: 0.03343, btn: btn }, { id: 6, name: "John", age: 20, createdAt: '2011-10-31', score: 0.03343, btn: btn }]
+            // rows: [
+            //     {
+            //         mode: 'span', // span means this header will span all columns
+            //         label: 'Header One', // this is the label that'll be used for the header
+            //         html: false, // if this is true, label will be rendered as html
+            //         children: [
+            //             { id:1, name:"John", age: 20, createdAt: '201-10-31:9: 35 am',score: 0.03343 },
+            //             { id:2, name:"Jane", age: 24, createdAt: '2011-10-31', score: 0.03343 },
+            //         ]
+            //     },
+            //     {
+            //         mode: 'span', // span means this header will span all columns
+            //         label: 'Header Two', // this is the label that'll be used for the header
+            //         html: false, // if this is true, label will be rendered as html
+            //         children: [
+            //             { id:3, name:"Susan", age: 16, createdAt: '2011-10-30', score: 0.03343 },
+            //             { id:4, name:"Chris", age: 55, createdAt: '2011-10-11', score: 0.03343 },
+            //         ]
+            //     }
+            // ]
         };
     },
 
@@ -40214,7 +40243,7 @@ var render = function() {
             "pagination-options": {
               enabled: true,
               mode: "records",
-              perPage: 100,
+              perPage: 3,
               position: "bottom",
               perPageDropdown: [3, 7, 9],
               dropdownAllowAll: false,
@@ -40232,6 +40261,9 @@ var render = function() {
               selectionInfoClass: "custom-class",
               selectionText: "rows selected",
               clearSelectionText: "clear"
+            },
+            groupOptions: {
+              enabled: false
             }
           },
           on: { "on-row-click": _vm.onRowClick }
@@ -40255,9 +40287,15 @@ var render = function() {
             ]
           ),
           _vm._v(" "),
-          _c("div", { attrs: { slot: "emptystate" }, slot: "emptystate" }, [
-            _vm._v("\n            No data for table!\n        ")
-          ])
+          _c(
+            "div",
+            {
+              staticClass: "text-center",
+              attrs: { slot: "emptystate" },
+              slot: "emptystate"
+            },
+            [_c("em", [_vm._v("No data for table!")])]
+          )
         ]
       )
     ],

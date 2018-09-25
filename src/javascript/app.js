@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Notifications from 'vue-notification';
 import { dom, config, library } from '@fortawesome/fontawesome-svg-core';
-import { faBell } from '@fortawesome/free-regular-svg-icons';
+import { faBell, faArrowAltCircleRight, faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons';
 import { faHome, faUser, faUsers, faCubes, faAngleRight, faArrowRight,
          faArrowLeft, faTimes, faCheckCircle, faExclamationTriangle,
          faInfoCircle, faExclamationCircle, faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
@@ -16,7 +16,7 @@ dom.watch();
 
 library.add(faBell, faHome, faUser, faUsers, faCubes, faAngleRight,
             faArrowRight, faArrowLeft, faTimes, faCheckCircle, faExclamationTriangle,
-            faInfoCircle, faExclamationCircle, faArrowDown, faArrowUp);
+            faInfoCircle, faExclamationCircle, faArrowDown, faArrowUp, faArrowAltCircleRight, faArrowAltCircleLeft);
 
 Vue.component('Fa', FontAwesomeIcon);
 

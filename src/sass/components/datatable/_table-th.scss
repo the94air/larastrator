@@ -1,14 +1,36 @@
 .vgt-table {
-	& th {
+	thead {
+		border-bottom: 2px solid $datatable-header-border-color;
+		th {
+			@apply align-bottom pr-4;
+			background: $datatable-header-background-color;
+			&.vgt-checkbox-col {
+				@apply align-middle;
+			}
+			&.sorting-asc {
+				[data-fa-pseudo-element=":before"] {
+					@apply opacity-100;
+				}
+			}
+			&.sorting-desc {
+				[data-fa-pseudo-element=":after"] {
+					@apply opacity-100;
+				}
+			}
+		}
+		th.line-numbers, th.vgt-checkbox-col {
+			border-bottom: 2px solid $datatable-header-border-color;
+		}
+	}
+	th {
 		@apply relative py-2 px-4 align-middle;
 		&.sorting {
 			@apply cursor-pointer;
 			padding-right: 0.5rem;
 			.svg-inline--fa {
-				@apply absolute;
+				@apply absolute opacity-50;
 				font-size: 0.6rem;
 				bottom: 1.2em;
-				opacity: 0.5;
 			}
 			[data-fa-pseudo-element=":before"] {
 				right: 1.7rem;
@@ -29,12 +51,12 @@
 			right: 1rem;
 		}
 	}
-	& th.line-numbers, & th.vgt-checkbox-col {
+	th.line-numbers, th.vgt-checkbox-col {
 		@apply break-words py-0 px-3 text-center;
 		border-bottom: 1px solid $table-row-border-color;
 		border-right: 1px solid $table-row-border-color;
 		width: 25px;
-		background: $table-header-and-footer-background-color;
+		background: $datatable-header-background-color;
 	}
 	tr:last-child {
 		th.line-numbers, th.vgt-checkbox-col {
@@ -44,33 +66,13 @@
 			border-bottom-left-radius: $table-border-radius;
 		}
 	}
-	& th.filter-th {
-		padding: .75em .75em .75em .75em;
+	th.filter-th {
+		@apply py-2 px-4;
+		border-top: 2px solid $datatable-header-border-color;
 	}
-	// th.vgt-row-header {
-	// 	border-bottom: 2px solid $border-color;
-	// 	border-top: 2px solid $border-color;
-	// 	background-color: lighten($border-color, 10%);
-	// }
-	thead {
-		border-bottom: 2px solid $table-header-and-footer-border-color;
-		th {
-			@apply align-bottom;
-			padding-right: 1rem;
-			background: $table-header-and-footer-background-color;
-			&.vgt-checkbox-col {
-				vertical-align: middle;
-			}
-			&.sorting-asc {
-				[data-fa-pseudo-element=":before"] {
-					opacity: 1;
-				}
-			}
-			&.sorting-desc {
-				[data-fa-pseudo-element=":after"] {
-					opacity: 1;
-				}
-			}
-		}
+	th.vgt-row-header {
+		border-bottom: 2px solid $datatable-header-border-color;
+		border-top: 2px solid $datatable-header-border-color;
+		background-color: $datatable-header-background-color;
 	}
 }

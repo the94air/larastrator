@@ -1,66 +1,37 @@
-.vgt-global-search{
-  padding: 5px 0px;
-  display: flex;
-  flex-wrap: no-wrap;
-  align-items: stretch;
-  border:  1px solid $border-color;
-  border-bottom: 0px;
-  background: linear-gradient($thead-bg-color-1, $thead-bg-color-2);
-}
-.vgt-global-search__input{
-  position:  relative;
-  padding-left: 40px;
-  flex-grow: 1;
-  .input__icon{
-    position:  absolute;
-    left:  0px;
-    max-width:  32px;
-    .magnifying-glass{
-      margin-top: 3px;
-      margin-left: 8px;
-      display: block;
-      width: 16px;
-      height: 16px;
-      border: 2px solid darken($border-color, 2%);
-      position: relative;
-      border-radius: 50%;
-      &:before{
-        content: "";
-        display: block;
-        position: absolute;
-        right: -7px;
-        bottom: -5px;
-        background: darken($border-color, 2%);
-        width: 8px;
-        height: 4px;
-        border-radius: 2px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-          -moz-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-      }
-    }
-  }
-  .vgt-input{
-  }
-}
-.vgt-global-search__actions{
-  margin-left: 10px;
+.vgt-global-search {
+	@apply flex;
+	margin-bottom: 0.45rem;
+	flex-wrap: no-wrap;
+	align-items: stretch;
+	.button {
+		font-size: 0.8rem;
+		padding-top: .4rem;
+		padding-bottom: .4rem;
+		border: 1px solid transparent;
+	}
+	.button + .button {
+		@apply ml-1;
+	}
 }
 
-.vgt-selection-info-row{
-  background: $notify-bg-color;
-  padding: 5px 16px;
-  font-size: 13px;
-  border-top:  1px solid $border-color;
-  border-left:  1px solid $border-color;
-  border-right:  1px solid $border-color;
-  color: lighten($notify-fg-color, 10%);
-  font-weight: bold;
-  a{
-    font-weight: bold;
-    display: inline-block;
-    margin-left: 10px;
-  }
+.vgt-global-search__input {
+	position:  relative;
+	flex-grow: 1;
+}
+
+.vgt-global-search__actions {
+	margin-left: 0.45rem;
+}
+
+.vgt-selection-info-row {
+	@apply rounded py-2 px-4;
+	font-size: 0.8rem;
+	font-weight: 600;
+	background: $datatable-selection-info-background-color;
+	margin-bottom: 0.45rem;
+	color: $datatable-selection-info-color;
+	a {
+		@apply inline-block no-underline ml-3;
+		font-weight: 600;
+	}
 }

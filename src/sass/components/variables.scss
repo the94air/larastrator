@@ -113,6 +113,11 @@ $table-header-and-footer-background-color: config('colors.grey-lighton');
 // Datatable
 $datatable-text-disabled: #909399;
 $datatable-background-color: config('colors.grey-lighter');
+$datatable-border-radius: 0.25em;
 $datatable-body-color: config('colors.grey-darker');
+$datatable-header-border-color: config('colors.grey');
+$datatable-header-background-color: config('colors.grey-lighton');
 $datatable-row-border-color: config('colors.grey');
 $datatable-clickable-row-hover-background-color: config('colors.grey-light');
+$datatable-selection-info-background-color: #faf0c1;
+$datatable-selection-info-color: #d3aa3b;
