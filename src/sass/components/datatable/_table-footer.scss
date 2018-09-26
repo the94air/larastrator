@@ -1,10 +1,9 @@
 .vgt-wrap__footer {
 	font-size: 0.8rem;
+	padding-top: 0.16rem;
 	.footer__row-count {
-		padding-top: 0.15rem;
 		&__label, &__select {
-			display: inline-block;
-			vertical-align: middle;
+			@apply inline-block align-middle;
 		}
 		&__label {
 			font-weight: 600;
@@ -12,7 +11,7 @@
 		&__select {
 			width: auto;
 			height: auto;
-			background: #e9eef2;
+			background: $datatable-row-count-select-background;
 			color: inherit;
 			&:focus {
 				@apply outline-none shadow-outline;
@@ -20,22 +19,17 @@
 		}
 	}
 	.footer__navigation {
-		padding: .16rem 0;
 		&__page-btn, &__info, &__page-info {
-			display: inline-block;
-			vertical-align: middle;
+			@apply inline-block align-middle;
 		}
 		&__page-btn {
-			@apply rounded;
-			text-decoration: none;
+			@apply rounded no-underline whitespace-no-wrap;
 			font-weight: 600;
-			white-space:nowrap;
 			&:focus {
 				@apply outline-none shadow-outline;
 			}
 			&.disabled {
-				opacity: 0.5;
-				cursor: not-allowed;
+				@apply opacity-50 cursor-not-allowed;
 			}
 			.chevron {
 				&.left::after {
@@ -55,11 +49,14 @@
 		}
 		&__page-info {
 			&__current-entry {
-				width: 30px;
-				text-align: center;
-				display: inline-block;
-				margin: 0px 10px;
-				font-weight: bold;
+				@apply inline-block text-center mx-2 my-0 rounded;
+				color: inherit;
+				width: 2rem;
+				height: auto;
+				font-weight: 600;
+				&:focus {
+					@apply outline-none shadow-outline;
+				}
 			}
 		}
 	}

@@ -5,13 +5,14 @@
             :columns="columns"
             :rows="rows"
             :lineNumbers="true"
+            :rtl="false"
             :search-options="{
                 enabled: true,
                 placeholder: 'Search this table',
             }"
             :pagination-options="{
                 enabled: true,
-                mode: 'records',
+                mode: 'pages',
                 perPage: 3,
                 position: 'bottom',
                 perPageDropdown: [3, 7, 9],
@@ -26,8 +27,7 @@
             }"
             :selectOptions="{
                 enabled: true,
-                selectOnCheckboxOnly: true, // only select when checkbox is clicked instead of the row
-                selectionInfoClass: 'custom-class',
+                selectOnCheckboxOnly: true,
                 selectionText: 'rows selected',
                 clearSelectionText: 'clear',
             }"
@@ -44,6 +44,9 @@
             <div slot="emptystate" class="text-center">
                 <em>No data for table!</em>
             </div>
+            <div slot="loadingContent">
+                <span class="vgt-loading__content"></span>
+            </div>
         </DataTable>
     </div>
 </template>
@@ -52,7 +55,7 @@
     import { VueGoodTable as DataTable } from 'vue-good-table';
 
     let btn = `
-        <div class="action">
+        <div class="text-center">
             <button class="button info">Open</button>
             <button class="button success">Edit</button>
             <button class="button danger">Delete</button>
@@ -71,7 +74,9 @@
                     { label: 'Age', field: 'age' },
                     { label: 'Created On', field: 'createdAt', dateInputFormat: 'YYYY-MM-DD', dateOutputFormat: 'MMM Do YY' },
                     { label: 'Percent', field: 'score' },
-                    { label: 'Action', field: 'btn', html: true, },
+                    { label: 'Action', field: 'btn', html: true, filterOptions: {
+      enabled: false
+    }, },
                 ],
                 rows: [
                     { id:1, name:"John", age: 20, createdAt: '201-10-31:9: 35 am',score: 0.03343, btn: btn, },

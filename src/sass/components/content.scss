@@ -1,6 +1,10 @@
 .content {
-    @apply w-4/5 px-2;
-    // h1, h2, h3, h4, h5, h6 {
-    //     @apply mb-3;
-    // }
+    @apply w-full px-4;
+    @screen md {
+        @apply px-2;
+        width: 70%;
+    }
+    @screen lg {
+        @apply w-4/5 px-2;
+    }
 }

@@ -1,5 +1,5 @@
 <template>
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
         <h2 class="sidebar-title">Menu</h2>
         <ul class="sidebar-menu">
             <li class="sidebar-item">

@@ -1,0 +1,13 @@
+.auth {
+    @apply flex justify-center items-center;
+    .auth-main {
+        .auth-content {
+            @apply shadow-md p-4 rounded;
+            min-width: 320px;
+            background: #fff;
+            .auth-title {
+                @apply text-2xl text-center mb-6;
+            }
+        }
+    }
+}

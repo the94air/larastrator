@@ -2,20 +2,41 @@
 	direction: rtl;
 	.vgt-global-search__actions {
 		@apply ml-0;
-		margin-left: 0.45rem;
+		margin-right: 0.45rem;
+		.button + .button {
+			@apply ml-0 mr-1;
+		}
 	}
 	.vgt-table {
-		td, th:not(.line-numbers) {
-			padding: .75em .75em .75em 1.5em;
+		th.line-numbers, th.vgt-checkbox-col {
+			border-right: none;
+			border-left: 1px solid $datatable-header-border-color;
 		}
-		thead th, &.condensed thead th {
-			padding-left:  1.5em;
-			padding-right:  .75em;
+		th {
+			&.sorting {
+				[data-fa-pseudo-element=":before"] {
+					right: auto;
+					left: 1.7rem;
+				}
+				[data-fa-pseudo-element=":after"] {
+					right: auto;
+					left: 1rem;
+				}
+			}
 		}
-		th.sorting:after,
-		th.sorting-asc:after {
-			margin-right:  5px;
-			margin-left:  0px;
+		tr:first-child th:first-child {
+			border-top-right-radius: $datatable-border-radius;
+		}
+		tr:first-child th:last-child {
+			border-top-left-radius: $datatable-border-radius;
+		}
+		tr:last-child th.line-numbers:first-child {
+			border-bottom-right-radius: $datatable-border-radius;
 		}
 	}
+	.vgt-selection-info-row {
+		a {
+			@apply mr-3;
+		}
+	}	
 }

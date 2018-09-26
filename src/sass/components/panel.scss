@@ -1,5 +1,8 @@
 .panel {
-    @apply flex -mx-2;
+    @apply flex -mx-4;
+    @screen md {
+        @apply -mx-2;
+    }
 }
 
 .panel-card {

@@ -2,7 +2,7 @@
 	thead {
 		border-bottom: 2px solid $datatable-header-border-color;
 		th {
-			@apply align-bottom pr-4;
+			@apply align-bottom pr-4 uppercase;
 			background: $datatable-header-background-color;
 			&.vgt-checkbox-col {
 				@apply align-middle;
@@ -26,7 +26,6 @@
 		@apply relative py-2 px-4 align-middle;
 		&.sorting {
 			@apply cursor-pointer;
-			padding-right: 0.5rem;
 			.svg-inline--fa {
 				@apply absolute opacity-50;
 				font-size: 0.6rem;
@@ -48,13 +47,12 @@
 			@apply hidden;
             font-family: 'Font Awesome 5 Solid';
 			content: "\f062";
-			right: 1rem;
 		}
 	}
 	th.line-numbers, th.vgt-checkbox-col {
 		@apply break-words py-0 px-3 text-center;
-		border-bottom: 1px solid $table-row-border-color;
-		border-right: 1px solid $table-row-border-color;
+		border-bottom: 1px solid $datatable-row-border-color;
+		border-right: 1px solid $datatable-row-border-color;
 		width: 25px;
 		background: $datatable-header-background-color;
 	}
@@ -63,7 +61,7 @@
 			border-bottom: none;
 		}
 		th.line-numbers:first-child {
-			border-bottom-left-radius: $table-border-radius;
+			border-bottom-left-radius: $datatable-border-radius;
 		}
 	}
 	th.filter-th {

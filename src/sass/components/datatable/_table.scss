@@ -1,7 +1,7 @@
 table.vgt-table {
 	@apply border-collapse w-full max-w-full table-auto;
 	background-color: $datatable-background-color;
-	border-radius: $table-border-radius;
+	border-radius: $datatable-border-radius;
 	margin-bottom: 0.45rem;
 	&.vgt-fixed-header {
 		@apply absolute z-10;
@@ -13,9 +13,6 @@ table.vgt-table {
 	.button + .button {
 		@apply ml-1;
 	}
-	.action {
-		@apply text-center;
-	}
 	tr:last-child td {
         border-bottom: none;
     }
@@ -26,18 +23,18 @@ table.vgt-table {
 	  	}
 	}
 	tr:first-child th:first-child {
-        border-top-left-radius: $table-border-radius;
+        border-top-left-radius: $datatable-border-radius;
     }
     tr:first-child th:last-child {
-        border-top-right-radius: $table-border-radius;
+        border-top-right-radius: $datatable-border-radius;
 	}
 	td {
 		@apply py-2 px-4 align-top;
-	  	border-bottom:  1px solid $datatable-row-border-color;
+	  	border-bottom: 1px solid $datatable-row-border-color;
 	  	color: $datatable-body-color;
 	}
     tr:last-child td:last-child {
-        border-bottom-right-radius: $table-border-radius;
+        border-bottom-right-radius: $datatable-border-radius;
     }
     tr:last-child td {
         border-bottom: none;

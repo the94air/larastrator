@@ -1,8 +1,6 @@
 .vgt-global-search {
-	@apply flex;
+	@apply flex flex-no-wrap items-stretch;
 	margin-bottom: 0.45rem;
-	flex-wrap: no-wrap;
-	align-items: stretch;
 	.button {
 		font-size: 0.8rem;
 		padding-top: .4rem;
@@ -15,8 +13,7 @@
 }
 
 .vgt-global-search__input {
-	position:  relative;
-	flex-grow: 1;
+	@apply relative flex-grow;
 }
 
 .vgt-global-search__actions {

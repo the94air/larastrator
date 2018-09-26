@@ -1,11 +1,11 @@
 <template>
-    <div class="content">
+    <div class="content" id="content">
         <Breadcrumb />
         <h1 class="panel-title">Page title</h1>
         <div class="panel-card">
             <HorizontalForm />
         </div>
-        <div class="panel-card">
+        <!-- <div class="panel-card">
             <VerticalForm />
             <hr>
             <Pagination />
@@ -15,7 +15,7 @@
         <div class="panel-card">
             <Table class="mb-5" />
             <DataTable />
-        </div>
+        </div> -->
     </div>
 </template>
 

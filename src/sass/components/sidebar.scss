@@ -1,5 +1,12 @@
 .sidebar {
-    @apply w-1/5 px-2;
+    @apply w-4/5 px-4;
+    @screen md {
+        @apply px-2;
+        width: 30%;
+    }
+    @screen lg {
+        @apply w-1/5 px-2;
+    }
     .sidebar-title {
         @apply text-base uppercase mb-5;
         font-weight: 600;

@@ -8,6 +8,8 @@ body {
     font-family: $main-font-family;
     background: $body-background-color;
     margin-top: 9rem;
+    width: 100%;
+    height: 100%;
     @screen sm {
         margin-top: 7rem;
         margin-bottom: 4rem;
