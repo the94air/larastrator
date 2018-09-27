@@ -5,7 +5,7 @@
         <div class="panel-card">
             <HorizontalForm />
         </div>
-        <!-- <div class="panel-card">
+        <div class="panel-card">
             <VerticalForm />
             <hr>
             <Pagination />
@@ -15,7 +15,7 @@
         <div class="panel-card">
             <Table class="mb-5" />
             <DataTable />
-        </div> -->
+        </div>
     </div>
 </template>
 
