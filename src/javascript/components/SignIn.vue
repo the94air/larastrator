@@ -7,10 +7,12 @@
                     <div class="input">
                         <label for="aemail">Email</label>
                         <input type="email" id="aemail">
+                        <span class="input-error">The email field is required.</span>
                     </div>
                     <div class="input">
                         <label for="apassword">Password</label>
                         <input type="password" id="apassword">
+                        <span class="input-error">The password field is required.</span>
                     </div>
                     <div class="checkbox">
                         <input type="checkbox" id="remember">

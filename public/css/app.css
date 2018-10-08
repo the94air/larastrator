@@ -1198,6 +1198,24 @@ hr {
           box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
 }
 
+.input input[type=color]:disabled,
+.input input[type=date]:disabled,
+.input input[type=datetime-local]:disabled,
+.input input[type=email]:disabled,
+.input input[type=month]:disabled,
+.input input[type=number]:disabled,
+.input input[type=password]:disabled,
+.input input[type=search]:disabled,
+.input input[type=tel]:disabled,
+.input input[type=text]:disabled,
+.input input[type=time]:disabled,
+.input input[type=url]:disabled,
+.input input[type=week]:disabled {
+  pointer-events: none;
+  opacity: .5;
+  background: #f1f1f1;
+}
+
 .input input[type=file] {
   position: absolute;
   height: 1px;
@@ -1251,6 +1269,11 @@ hr {
           box-shadow: 0 0 0 2px rgba(33, 150, 243, .3);
 }
 
+.input input[type=file]:disabled + label {
+  pointer-events: none;
+  opacity: .5;
+}
+
 .input select:not([multiple]) {
   position: relative;
   display: block;
@@ -1283,6 +1306,12 @@ hr {
           box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
 }
 
+.input select:not([multiple]):disabled {
+  pointer-events: none;
+  opacity: .5;
+  background-color: #f1f1f1;
+}
+
 .input textarea {
   display: block;
   width: 100%;
@@ -1308,6 +1337,12 @@ hr {
   outline: 0;
   -webkit-box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
           box-shadow: 0 0 0 3px rgba(201, 210, 218, .5);
+}
+
+.input textarea:disabled {
+  pointer-events: none;
+  opacity: .5;
+  background: #f1f1f1;
 }
 
 .input select[multiple] {
@@ -1344,6 +1379,19 @@ hr {
   font-weight: 600;
 }
 
+.input select[multiple]:disabled {
+  pointer-events: none;
+  opacity: .5;
+  background: #f1f1f1;
+}
+
+.input .input-error {
+  display: block;
+  text-align: right;
+  font-size: .8rem;
+  color: #a10000;
+}
+
 .checkbox {
   margin-bottom: .5rem;
 }
@@ -1351,6 +1399,11 @@ hr {
 .checkbox input[type=checkbox] {
   margin-right: .25rem;
   line-height: 1.25;
+}
+
+.checkbox input[type=checkbox]:disabled {
+  pointer-events: none;
+  opacity: .5;
 }
 
 .checkbox-label {
@@ -1366,6 +1419,11 @@ hr {
 .radio input[type=radio] {
   margin-right: .25rem;
   line-height: 1.25;
+}
+
+.radio input[type=radio]:disabled {
+  pointer-events: none;
+  opacity: .5;
 }
 
 .radio-label {
@@ -1405,8 +1463,8 @@ hr {
 .paginate a:hover {
   text-decoration: none;
   background: #e9eef1;
-  -webkit-transform: scale(.95);
-          transform: scale(.95);
+  -webkit-transform: scale(.985);
+          transform: scale(.985);
 }
 
 .button:focus,
@@ -1418,8 +1476,14 @@ hr {
 
 .button:active,
 .paginate a:active {
-  -webkit-transform: scale(.9);
-          transform: scale(.9);
+  -webkit-transform: scale(.97);
+          transform: scale(.97);
+}
+
+.button:disabled,
+.paginate a:disabled {
+  pointer-events: none;
+  opacity: .5;
 }
 
 a.success,

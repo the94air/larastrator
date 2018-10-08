@@ -24,3 +24,5 @@
 24. Create the DataTable remote mode loader.
 25. Install 'vue-slideout' for sidebar slideout effect.
 26. Create sidebar slideout using 'vue-slidout'.
+27. Add disabled event styling for inputs and buttons.
+28. Create 'input error' component.

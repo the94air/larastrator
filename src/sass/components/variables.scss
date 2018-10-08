@@ -36,6 +36,7 @@ $sidebar-dropdowns-slide-transition-duration: ease;
 $input-box-border-color: config('colors.grey-semi-light');
 $input-box-transition-function: 200ms;
 $input-box-transition-duration: ease;
+$input-box-disabled-background-color: #f1f1f1;
 //## input file ##
 $input-file-background-color: #dae1e7;
 $input-file-background-color-hover: lighten(#dae1e7, 5%);
@@ -49,10 +50,14 @@ $input-select-border-color: config('colors.grey-semi-light');
 $input-select-multiple-selected-background-color: config('colors.grey-dark');
 $input-select-transition-duration: 200ms;
 $input-select-transition-function: ease;
+$input-select-disabled-background-color: #f1f1f1;
 //## input textarea ##
 $input-textarea-border-color: config('colors.grey-semi-light');
 $input-textarea-transition-duration: 200ms;
 $input-textarea-transition-function: ease;
+$input-textarea-disabled-background-color: #f1f1f1;
+//## input error ##
+$input-error-color: #a10000;
 
 // Buttons
 $button-color: $main-text-color;

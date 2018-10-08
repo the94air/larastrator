@@ -8,13 +8,16 @@
     &:hover {
         @apply no-underline;
         background: $button-background-color-hover;
-        transform: scale(0.95);
+        transform: scale(.985);
     }
     &:focus {
         @apply outline-none shadow-button;
     }
     &:active {
-        transform: scale(0.9);
+        transform: scale(.97);
+    }
+    &:disabled {
+        @apply pointer-events-none opacity-50;
     }
 }
 
