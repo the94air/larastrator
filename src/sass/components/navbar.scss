@@ -78,7 +78,7 @@
         }
         > .navbar-dropdown {
             @apply absolute rounded z-20 list-reset shadow;
-            bottom: -6.5rem;
+            margin-top: 1.4rem;
             right: 0;
             width: 150px;
             background: $navbar-dropdown-background;
