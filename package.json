@@ -9,6 +9,10 @@
     "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/the94air/larastrator.git"
+  },
   "keywords": [
     "larastrator",
     "tailwindcss",
@@ -38,5 +42,9 @@
     "@fortawesome/free-regular-svg-icons": "^5.3.1",
     "@fortawesome/free-solid-svg-icons": "^5.3.1",
     "@fortawesome/vue-fontawesome": "^0.1.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/the94air/larastrator/issues"
+  },
+  "homepage": "https://github.com/the94air/larastrator"
 }
