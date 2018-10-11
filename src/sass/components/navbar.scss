@@ -29,7 +29,7 @@
     padding-top: 0.3125rem;
     padding-bottom: 0.3125rem;
     > .navbar-item {
-        @apply ml-4;
+        @apply relative ml-4;
         &:nth-child(1) {
             @apply ml-0;
         }
@@ -72,6 +72,28 @@
                         
                         width: 12px;
                         height: 12px;
+                    }
+                }
+            }
+        }
+        > .navbar-dropdown {
+            @apply absolute rounded z-20 list-reset shadow;
+            bottom: -6.5rem;
+            right: 0;
+            width: 150px;
+            background: $navbar-dropdown-background;
+            border: 0.3rem solid $navbar-dropdown-background;
+            > .navbar-dropdown-item {
+                > .navbar-dropdown-link {
+                    @apply block rounded no-underline p-2 mb-1;
+                    background: $navbar-dropdown-link-background;
+                    transition: all $navbar-dropdown-link-transition-duration $navbar-dropdown-link-transition-function;
+                    &:hover, &:focus {
+                        background: $navbar-dropdown-link-background-hover;
+                        color: inherit;
+                    }
+                    &:last-child {
+                        @apply mb-0;
                     }
                 }
             }

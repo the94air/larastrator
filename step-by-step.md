@@ -26,3 +26,4 @@
 26. Create sidebar slideout using 'vue-slidout'.
 27. Add disabled event styling for inputs and buttons.
 28. Create 'input error' component.
+29. Add 'navbar dropdown' styles.

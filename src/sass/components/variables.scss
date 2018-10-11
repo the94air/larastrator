@@ -10,6 +10,11 @@ $selection-background-color: config('colors.grey-light');
 
 // Navbar
 $navbar-background: config('colors.white');
+$navbar-dropdown-background: config('colors.white');
+$navbar-dropdown-link-background: config('colors.white');
+$navbar-dropdown-link-background-hover: config('colors.grey-light');
+$navbar-dropdown-link-transition-duration: 100ms;
+$navbar-dropdown-link-transition-function: ease;
 
 // Links
 $links-color: $main-text-color;

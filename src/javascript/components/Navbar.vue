@@ -19,16 +19,44 @@
                         </a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="navbar-avatar">
+                        <a href="#" class="navbar-avatar" @click="dropdown = !dropdown">
                             <div class="navbar-avatar-info">
                                 <span>Abdalla Arbab</span>
                                 <span><span class="navbar-status bg-green border-green-lighter"></span> Online</span>
                             </div>
                             <img class="img-fluid rounded-full" src="images/avatar.jpeg" alt="@abdalla__Arbab" title="@abdalla__Arbab">
                         </a>
+                        <transition name="dropdown-slide-down">
+                            <ul class="navbar-dropdown" v-if="dropdown">
+                                <li class="navbar-dropdown-item">
+                                    <a href="#" class="navbar-dropdown-link">Profile</a>
+                                    <a href="#" class="navbar-dropdown-link">Sign out</a>
+                                </li>
+                            </ul>
+                        </transition>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                dropdown: false
+            }
+        },
+    }
+</script>
+
+<style scoped>
+    .dropdown-slide-down-enter-active, .dropdown-slide-down-leave-active {
+        transition: all .3s ease;
+    }
+    .dropdown-slide-down-enter, .dropdown-slide-down-leave-to  {
+        transform: translateY(-10px) translateX(10px);
+        opacity: 0;
+    }
+</style>

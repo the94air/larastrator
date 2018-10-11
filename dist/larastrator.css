@@ -811,6 +811,7 @@ hr {
 }
 
 .navbar-menu > .navbar-item {
+  position: relative;
   margin-left: 1rem;
 }
 
@@ -907,6 +908,42 @@ hr {
   margin-right: .25rem;
   width: 12px;
   height: 12px;
+}
+
+.navbar-menu > .navbar-item > .navbar-dropdown {
+  position: absolute;
+  border-radius: .25rem;
+  z-index: 20;
+  list-style: none;
+  padding: 0;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+  bottom: -6.5rem;
+  right: 0;
+  width: 150px;
+  background: #fff;
+  border: .3rem solid #fff;
+}
+
+.navbar-menu > .navbar-item > .navbar-dropdown > .navbar-dropdown-item > .navbar-dropdown-link {
+  display: block;
+  border-radius: .25rem;
+  text-decoration: none;
+  padding: .5rem;
+  margin-bottom: .25rem;
+  background: #fff;
+  -webkit-transition: all 100ms ease;
+  transition: all 100ms ease;
+}
+
+.navbar-menu > .navbar-item > .navbar-dropdown > .navbar-dropdown-item > .navbar-dropdown-link:hover,
+.navbar-menu > .navbar-item > .navbar-dropdown > .navbar-dropdown-item > .navbar-dropdown-link:focus {
+  background: #dae1e7;
+  color: inherit;
+}
+
+.navbar-menu > .navbar-item > .navbar-dropdown > .navbar-dropdown-item > .navbar-dropdown-link:last-child {
+  margin-bottom: 0;
 }
 
 .panel {
