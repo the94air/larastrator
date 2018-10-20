@@ -2226,10 +2226,6 @@ table.vgt-table tr:last-child td {
           flex-grow: 1;
 }
 
-.vgt-global-search__actions {
-  margin-left: .45rem;
-}
-
 .vgt-selection-info-row {
   border-radius: .25rem;
   padding-top: .5rem;

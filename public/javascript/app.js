@@ -35083,7 +35083,7 @@ var render = function() {
             "div",
             { attrs: { slot: "table-actions" }, slot: "table-actions" },
             [
-              _c("button", { staticClass: "button success" }, [
+              _c("button", { staticClass: "button success ml-2" }, [
                 _vm._v("Completed")
               ]),
               _vm._v(" "),

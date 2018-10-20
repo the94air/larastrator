@@ -37,7 +37,7 @@
             }"
         >
             <div slot="table-actions">
-                <button class="button success">Completed</button>
+                <button class="button success ml-2">Completed</button>
                 <button class="button warning">Pending</button>
                 <button class="button danger">Rejected</button>
             </div>
