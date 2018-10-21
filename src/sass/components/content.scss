@@ -1,5 +1,10 @@
 .content {
     @apply w-full px-4;
+    margin-top: 9rem;
+    @screen sm {
+        margin-top: 7rem;
+        margin-bottom: 4rem;
+    }
     @screen md {
         @apply px-2;
         width: 70%;

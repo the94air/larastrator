@@ -1,5 +1,8 @@
 .sidebar {
     @apply w-4/5 px-4;
+    @screen sm {
+        margin-top: 7rem;
+    }
     @screen md {
         @apply px-2;
         width: 30%;

@@ -669,16 +669,8 @@ html {
 body {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   background: #f7f7f7;
-  margin-top: 9rem;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width: 576px) {
-  body {
-    margin-top: 7rem;
-    margin-bottom: 4rem;
-  }
 }
 
 ::-moz-selection {
@@ -981,6 +973,12 @@ hr {
   padding-right: 1rem;
 }
 
+@media (min-width: 576px) {
+  .sidebar {
+    margin-top: 7rem;
+  }
+}
+
 @media (min-width: 768px) {
   .sidebar {
     padding-left: .5rem;
@@ -1112,6 +1110,14 @@ hr {
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-top: 9rem;
+}
+
+@media (min-width: 576px) {
+  .content {
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+  }
 }
 
 @media (min-width: 768px) {
