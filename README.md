@@ -162,7 +162,7 @@ Vue.use(Notifications);
 ```
 ## Components
 ### Navbar
-```
+```vue
 <template>
     <nav class="navbar navbar-fixed">
         <div class="container">
@@ -231,7 +231,7 @@ Vue.use(Notifications);
 ```
 ### Panel
 to build the panel area and the sidebar you will need to use `vue-slidout` package.
-```
+```vue
 <template>
     <!-- panel main component -->
     <Slideout menu="#sidebar" panel="#content">
@@ -326,7 +326,7 @@ to build the panel area and the sidebar you will need to use `vue-slidout` packa
 </script>
 ```
 ### Alerts
-```
+```vue
 <template>
     <div>
 
@@ -371,7 +371,7 @@ to build the panel area and the sidebar you will need to use `vue-slidout` packa
 ```
 ### Notification
 If you want to use the notification component some were else:
-```
+```vue
 <template>
     <div class="notification">
         <div>Your new post has been saved!</div>
@@ -410,7 +410,7 @@ If you want to use the notification component some were else:
 ```
 
 ### Horizontal Form
-```
+```vue
 <template>
     <form @submit.prevent="(e) => {}">
         <div class="flex flex-wrap -mx-2">
@@ -519,7 +519,7 @@ If you want to use the notification component some were else:
 </script>
 ```
 ### Vertical Form
-```
+```vue
 <template>
     <form @submit.prevent="(e) => {}">
         <div class="input">
@@ -683,7 +683,7 @@ If you want to use the notification component some were else:
 ```
 
 ### Pagination
-```
+```vue
 <template>
     <nav class="paginate">
         <a class="previous" href="#"><Fa :icon="['fas', 'arrow-left']" /> Prev</a>
@@ -704,7 +704,7 @@ If you want to use the notification component some were else:
 ```
 
 ### Table
-```
+```vue
 <template>
     <div class="w-full">
         <h2 class="mb-4">Table example</h2>
@@ -751,7 +751,7 @@ If you want to use the notification component some were else:
 ```
 
 ### DataTable
-```
+```vue
 <template>
     <div class="w-full">
         <h2 class="mb-4">DataTable example</h2>
@@ -853,7 +853,7 @@ If you want to use the notification component some were else:
 ```
 
 ### Sign in
-```
+```vue
 <template>
     <div class="h-screen">
         <div class="auth h-full">
@@ -891,7 +891,7 @@ If you want to use the notification component some were else:
 ```
 
 ### Sign up
-```
+```vue
 <template>
     <div class="h-screen">
         <div class="auth h-full">
