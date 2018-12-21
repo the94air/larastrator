@@ -10,7 +10,10 @@
                         <a href="#" class="navbar-link select">Link1</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="navbar-link">Link2</a>
+                        <a href="signin.html" class="navbar-link">Sign in</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="signup.html" class="navbar-link">Sign up</a>
                     </li>
                     <li class="navbar-item">
                         <a href="#" class="navbar-notify">
@@ -19,12 +22,12 @@
                         </a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="navbar-avatar" @click="dropdown = !dropdown">
+                        <a href="#" class="navbar-avatar" @click.prevent="dropdown = !dropdown">
                             <div class="navbar-avatar-info">
-                                <span>Abdalla Arbab</span>
+                                <span>John Doe</span>
                                 <span><span class="navbar-status bg-green border-green-lighter"></span> Online</span>
                             </div>
-                            <img class="img-fluid rounded-full" src="images/avatar.jpeg" alt="@abdalla__Arbab" title="@abdalla__Arbab">
+                            <img class="img-fluid rounded-full" src="images/avatar.jpeg" alt="@john__doe" title="@john__doe">
                         </a>
                         <transition name="dropdown-slide-down">
                             <ul class="navbar-dropdown" v-if="dropdown">

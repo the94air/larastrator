@@ -1,19 +1,21 @@
 @tailwind preflight;
 @tailwind components;
+
 @import './components/variables';
-@import './components/normlize';
+@import './components/normalize';
 @import './components/navbar';
+@import './components/slideout';
 @import './components/panel';
 @import './components/sidebar';
 @import './components/content';
+@import './components/notifications';
 @import './components/breadcrumb';
 @import './components/form';
 @import './components/buttons';
 @import './components/pagination';
-@import './components/notifications';
 @import './components/alerts';
-@import './components/table';
 @import './components/datatable';
+@import './components/table';
 @import './components/auth';
-@import './components/slideout';
+
 @tailwind utilities;

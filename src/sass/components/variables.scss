@@ -1,9 +1,9 @@
 // Fonts
 $main-font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$main-text-color: config('colors.grey-darken');
+$main-text-color: config('colors.brand-grey-darker');
 
 // body
-$body-background-color: config('colors.grey-lighten');
+$body-background-color: config('colors.brand-grey-lightest');
 
 // Selection
 $selection-background-color: config('colors.grey-light');
@@ -24,8 +24,8 @@ $links-color-transition-function: ease;
 
 // Sidebar
 $sidebar-links-color: $links-color;
-$sidebar-links-color-hover: config('colors.grey-semi-light');
-$sidebar-icons-color: config('colors.grey-semi-light');
+$sidebar-links-color-hover: config('colors.brand-grey-light');
+$sidebar-icons-color: config('colors.brand-grey-light');
 $sidebar-icons-color-hover: $links-color-hover;
 $sidebar-icons-color-transition-function: 100ms;
 $sidebar-icons-color-transition-duration: ease;
@@ -38,7 +38,7 @@ $sidebar-dropdowns-slide-transition-duration: ease;
 
 // Inputs
 //## input box ##
-$input-box-border-color: config('colors.grey-semi-light');
+$input-box-border-color: config('colors.brand-grey-light');
 $input-box-transition-function: 200ms;
 $input-box-transition-duration: ease;
 $input-box-disabled-background-color: #f1f1f1;
@@ -51,13 +51,13 @@ $input-file-transition-duration: ease;
 //## input select ##
 $input-select-background-color: config('colors.white');
 $input-select-color: $main-text-color;
-$input-select-border-color: config('colors.grey-semi-light');
+$input-select-border-color: config('colors.brand-grey-light');
 $input-select-multiple-selected-background-color: config('colors.grey-dark');
 $input-select-transition-duration: 200ms;
 $input-select-transition-function: ease;
 $input-select-disabled-background-color: #f1f1f1;
 //## input textarea ##
-$input-textarea-border-color: config('colors.grey-semi-light');
+$input-textarea-border-color: config('colors.brand-grey-light');
 $input-textarea-transition-duration: 200ms;
 $input-textarea-transition-function: ease;
 $input-textarea-disabled-background-color: #f1f1f1;
@@ -118,7 +118,7 @@ $table-header-and-footer-color: config('colors.grey-darker');
 $table-header-and-footer-border-color: config('colors.grey');
 $table-body-color: config('colors.grey-darker');
 $table-row-border-color: config('colors.grey');
-$table-header-and-footer-background-color: config('colors.grey-lighton');
+$table-header-and-footer-background-color: config('colors.brand-grey-lighter');
 
 // Datatable
 $datatable-text-disabled: #909399;
@@ -126,9 +126,9 @@ $datatable-background-color: config('colors.grey-lighter');
 $datatable-border-radius: 0.25em;
 $datatable-body-color: config('colors.grey-darker');
 $datatable-header-border-color: config('colors.grey');
-$datatable-header-background-color: config('colors.grey-lighton');
+$datatable-header-background-color: config('colors.brand-grey-lighter');
 $datatable-row-border-color: config('colors.grey');
 $datatable-clickable-row-hover-background-color: config('colors.grey-light');
 $datatable-selection-info-background-color: #faf0c1;
 $datatable-selection-info-color: #d3aa3b;
-$datatable-row-count-select-background: config('colors.grey-lighton');
+$datatable-row-count-select-background: config('colors.brand-grey-lighter');

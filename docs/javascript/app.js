@@ -13783,7 +13783,7 @@ module.exports = exports["default"];
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(14);
-module.exports = __webpack_require__(110);
+module.exports = __webpack_require__(108);
 
 
 /***/ }),
@@ -18859,7 +18859,7 @@ var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = __webpack_require__(23)
 /* template */
-var __vue_template__ = __webpack_require__(109)
+var __vue_template__ = __webpack_require__(107)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -18909,8 +18909,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Main___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Main__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Notifications__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Notifications___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Notifications__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SignIn__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SignIn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__SignIn__);
 //
 //
 //
@@ -18919,15 +18917,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-
 
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    components: { Navbar: __WEBPACK_IMPORTED_MODULE_0__Navbar___default.a, Main: __WEBPACK_IMPORTED_MODULE_1__Main___default.a, Notifications: __WEBPACK_IMPORTED_MODULE_2__Notifications___default.a, SignIn: __WEBPACK_IMPORTED_MODULE_3__SignIn___default.a }
+    components: { Navbar: __WEBPACK_IMPORTED_MODULE_0__Navbar___default.a, Main: __WEBPACK_IMPORTED_MODULE_1__Main___default.a, Notifications: __WEBPACK_IMPORTED_MODULE_2__Notifications___default.a }
 });
 
 /***/ }),
@@ -19413,6 +19409,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -19439,6 +19438,8 @@ var render = function() {
           _vm._m(1),
           _vm._v(" "),
           _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3),
           _vm._v(" "),
           _c("li", { staticClass: "navbar-item" }, [
             _c(
@@ -19468,19 +19469,20 @@ var render = function() {
                   attrs: { href: "#" },
                   on: {
                     click: function($event) {
+                      $event.preventDefault()
                       _vm.dropdown = !_vm.dropdown
                     }
                   }
                 },
                 [
-                  _vm._m(3),
+                  _vm._m(4),
                   _vm._v(" "),
                   _c("img", {
                     staticClass: "img-fluid rounded-full",
                     attrs: {
                       src: "images/avatar.jpeg",
-                      alt: "@abdalla__Arbab",
-                      title: "@abdalla__Arbab"
+                      alt: "@john__doe",
+                      title: "@john__doe"
                     }
                   })
                 ]
@@ -19543,8 +19545,18 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", { staticClass: "navbar-item" }, [
-      _c("a", { staticClass: "navbar-link", attrs: { href: "#" } }, [
-        _vm._v("Link2")
+      _c("a", { staticClass: "navbar-link", attrs: { href: "signin.html" } }, [
+        _vm._v("Sign in")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "navbar-item" }, [
+      _c("a", { staticClass: "navbar-link", attrs: { href: "signup.html" } }, [
+        _vm._v("Sign up")
       ])
     ])
   },
@@ -19553,7 +19565,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "navbar-avatar-info" }, [
-      _c("span", [_vm._v("Abdalla Arbab")]),
+      _c("span", [_vm._v("John Doe")]),
       _vm._v(" "),
       _c("span", [
         _c("span", {
@@ -21169,44 +21181,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -21252,22 +21226,20 @@ var render = function() {
       _vm._v(" "),
       _vm._m(2),
       _vm._v(" "),
-      _c("div", { staticClass: "flex -mx-2" }, [
-        _c("div", { staticClass: "w-1/2 px-2" }, [
-          _c("div", { staticClass: "input" }, [
-            _c("label", { attrs: { for: "profile_image" } }, [
-              _vm._v("Profile image")
-            ]),
+      _c("div", { staticClass: "flex flex-wrap -mx-2" }, [
+        _c("div", { staticClass: "input w-full md:w-1/2 px-2" }, [
+          _c("label", { attrs: { for: "profile_image" } }, [
+            _vm._v("Profile image")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "file" }, [
+            _c("input", {
+              attrs: { type: "file", id: "profile_image", tabindex: "0" },
+              on: { change: _vm.showFileName }
+            }),
             _vm._v(" "),
-            _c("div", { staticClass: "file" }, [
-              _c("input", {
-                attrs: { type: "file", id: "profile_image", tabindex: "0" },
-                on: { change: _vm.showFileName }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "profile_image" } }, [
-                _vm._v(_vm._s(_vm.inputFileName))
-              ])
+            _c("label", { attrs: { for: "profile_image" } }, [
+              _vm._v(_vm._s(_vm.inputFileName))
             ])
           ])
         ]),
@@ -21286,21 +21258,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex -mx-2" }, [
-      _c("div", { staticClass: "w-1/2 px-2" }, [
-        _c("div", { staticClass: "input" }, [
-          _c("label", { attrs: { for: "full_name" } }, [_vm._v("Full name")]),
-          _vm._v(" "),
-          _c("input", { attrs: { type: "text", id: "full_name" } })
-        ])
+    return _c("div", { staticClass: "flex flex-wrap -mx-2" }, [
+      _c("div", { staticClass: "input w-full md:w-1/2 px-2" }, [
+        _c("label", { attrs: { for: "full_name" } }, [_vm._v("Full name")]),
+        _vm._v(" "),
+        _c("input", { attrs: { type: "text", id: "full_name" } })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "w-1/2 px-2" }, [
-        _c("div", { staticClass: "input" }, [
-          _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
-          _vm._v(" "),
-          _c("input", { attrs: { type: "email", id: "email" } })
-        ])
+      _c("div", { staticClass: "input w-full md:w-1/2 px-2" }, [
+        _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
+        _vm._v(" "),
+        _c("input", { attrs: { type: "email", id: "email" } })
       ])
     ])
   },
@@ -21308,146 +21276,102 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex" }, [
-      _c("div", { staticClass: "w-full mb-2" }, [
-        _c("div", { staticClass: "flex" }, [
-          _c("div", { staticClass: "w-full" }, [
-            _c("label", { staticClass: "checkbox-label" }, [_vm._v("Gender")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "flex -mx-2" }, [
-          _c("div", { staticClass: "w-1/2 px-2" }, [
-            _c("div", { staticClass: "radio" }, [
-              _c("input", {
-                attrs: { type: "radio", name: "gender", id: "male" }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "male" } }, [_vm._v("Male")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-1/2 px-2" }, [
-            _c("div", { staticClass: "radio" }, [
-              _c("input", {
-                attrs: { type: "radio", name: "gender", id: "female" }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "female" } }, [_vm._v("Female")])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex" }, [
-      _c("div", { staticClass: "w-full mb-2" }, [
-        _c("div", { staticClass: "flex" }, [
-          _c("div", { staticClass: "w-full" }, [
-            _c("label", { staticClass: "radio-label" }, [
-              _vm._v("Your hobbies")
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "flex -mx-2" }, [
-          _c("div", { staticClass: "w-1/2 px-2" }, [
-            _c("div", { staticClass: "checkbox" }, [
-              _c("input", { attrs: { type: "checkbox", id: "basketball" } }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "basketball" } }, [
-                _vm._v("Basketball")
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-1/2 px-2" }, [
-            _c("div", { staticClass: "checkbox" }, [
-              _c("input", { attrs: { type: "checkbox", id: "football" } }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "football" } }, [_vm._v("Football")])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "flex -mx-2" }, [
-          _c("div", { staticClass: "w-1/2 px-2" }, [
-            _c("div", { staticClass: "checkbox" }, [
-              _c("input", { attrs: { type: "checkbox", id: "tennis" } }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "tennis" } }, [_vm._v("Tennis")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-1/2 px-2" }, [
-            _c("div", { staticClass: "checkbox" }, [
-              _c("input", { attrs: { type: "checkbox", id: "golf" } }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "golf" } }, [_vm._v("Golf")])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-1/2 px-2" }, [
-      _c("div", { staticClass: "input" }, [
-        _c("label", { attrs: { for: "country" } }, [_vm._v("Country")]),
-        _vm._v(" "),
-        _c("select", { attrs: { id: "country" } }, [
-          _c("option", { attrs: { value: "" } }, [_vm._v("Select an option")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "america" } }, [
-            _vm._v("U.S. of america")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "unitedkingdom" } }, [
-            _vm._v("United Kingdom")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "japan" } }, [_vm._v("Japan")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "china" } }, [_vm._v("China")])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex -mx-2" }, [
-      _c("div", { staticClass: "w-1/2 px-2" }, [
-        _c("div", { staticClass: "input" }, [
-          _c("label", { attrs: { for: "bio" } }, [
-            _vm._v("Tell us more about you")
-          ]),
-          _vm._v(" "),
-          _c("textarea", { attrs: { id: "bio" } })
-        ])
+    return _c("div", { staticClass: "flex flex-wrap -mx-2 mb-2" }, [
+      _c("div", { staticClass: "w-full px-2" }, [
+        _c("label", { staticClass: "checkbox-label" }, [_vm._v("Gender")])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "w-1/2 px-2" }, [
-        _c("div", { staticClass: "input" }, [
-          _c("label", { attrs: { for: "favorite_fruit" } }, [
-            _vm._v("What's your favorite fruit?")
-          ]),
+      _c("div", { staticClass: "radio w-full md:w-1/2 px-2" }, [
+        _c("input", { attrs: { type: "radio", name: "gender", id: "male" } }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "male" } }, [_vm._v("Male")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "radio w-full md:w-1/2 px-2" }, [
+        _c("input", { attrs: { type: "radio", name: "gender", id: "female" } }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "female" } }, [_vm._v("Female")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-wrap -mx-2 mb-2" }, [
+      _c("div", { staticClass: "w-full px-2" }, [
+        _c("label", { staticClass: "radio-label" }, [_vm._v("Your hobbies")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "checkbox w-full md:w-1/2 px-2" }, [
+        _c("input", { attrs: { type: "checkbox", id: "basketball" } }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "basketball" } }, [_vm._v("Basketball")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "checkbox w-full md:w-1/2 px-2" }, [
+        _c("input", { attrs: { type: "checkbox", id: "football" } }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "football" } }, [_vm._v("Football")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "checkbox w-full md:w-1/2 px-2" }, [
+        _c("input", { attrs: { type: "checkbox", id: "tennis" } }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "tennis" } }, [_vm._v("Tennis")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "checkbox w-full md:w-1/2 px-2" }, [
+        _c("input", { attrs: { type: "checkbox", id: "golf" } }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "golf" } }, [_vm._v("Golf")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input w-full md:w-1/2 px-2" }, [
+      _c("label", { attrs: { for: "country" } }, [_vm._v("Country")]),
+      _vm._v(" "),
+      _c("select", { attrs: { id: "country" } }, [
+        _c("option", { attrs: { value: "" } }, [_vm._v("Select an option")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "america" } }, [_vm._v("US")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "unitedkingdom" } }, [_vm._v("UK")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "japan" } }, [_vm._v("Japan")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "china" } }, [_vm._v("China")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-wrap -mx-2" }, [
+      _c("div", { staticClass: "input w-full md:w-1/2 px-2" }, [
+        _c("label", { attrs: { for: "bio" } }, [
+          _vm._v("Tell us more about you")
+        ]),
+        _vm._v(" "),
+        _c("textarea", { attrs: { id: "bio" } })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input w-full md:w-1/2 px-2" }, [
+        _c("label", { attrs: { for: "favorite_fruit" } }, [
+          _vm._v("What's your favorite fruit?")
+        ]),
+        _vm._v(" "),
+        _c("select", { attrs: { id: "favorite_fruit", multiple: "" } }, [
+          _c("option", { attrs: { value: "banana" } }, [_vm._v("Banana")]),
           _vm._v(" "),
-          _c("select", { attrs: { id: "favorite_fruit", multiple: "" } }, [
-            _c("option", { attrs: { value: "banana" } }, [_vm._v("Banana")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "mango" } }, [_vm._v("Mango")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "apple" } }, [_vm._v("Apple")])
-          ])
+          _c("option", { attrs: { value: "mango" } }, [_vm._v("Mango")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "apple" } }, [_vm._v("Apple")])
         ])
       ])
     ])
@@ -21716,10 +21640,10 @@ var render = function() {
       _vm._m(3),
       _vm._v(" "),
       _c("div", { staticClass: "input" }, [
-        _c("div", { staticClass: "flex -mx-2" }, [
+        _c("div", { staticClass: "flex flex-wrap -mx-2" }, [
           _vm._m(4),
           _vm._v(" "),
-          _c("div", { staticClass: "w-2/3 px-2" }, [
+          _c("div", { staticClass: "w-full md:w-2/3 px-2" }, [
             _c("div", { staticClass: "file" }, [
               _c("input", {
                 attrs: { type: "file", id: "vprofile_image", tabindex: "0" },
@@ -21750,12 +21674,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "input" }, [
-      _c("div", { staticClass: "flex -mx-2" }, [
-        _c("div", { staticClass: "w-1/3 px-2" }, [
+      _c("div", { staticClass: "flex flex-wrap -mx-2" }, [
+        _c("div", { staticClass: "w-full md:w-1/3 px-2" }, [
           _c("label", { attrs: { for: "vfull_name" } }, [_vm._v("Full name")])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "w-2/3 px-2" }, [
+        _c("div", { staticClass: "w-full md:w-2/3 px-2" }, [
           _c("input", { attrs: { type: "text", id: "vfull_name" } })
         ])
       ])
@@ -21766,12 +21690,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "input" }, [
-      _c("div", { staticClass: "flex -mx-2" }, [
-        _c("div", { staticClass: "w-1/3 px-2" }, [
+      _c("div", { staticClass: "flex flex-wrap -mx-2" }, [
+        _c("div", { staticClass: "w-full md:w-1/3 px-2" }, [
           _c("label", { attrs: { for: "vemail" } }, [_vm._v("Email")])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "w-2/3 px-2" }, [
+        _c("div", { staticClass: "w-full md:w-2/3 px-2" }, [
           _c("input", { attrs: { type: "email", id: "vemail" } })
         ])
       ])
@@ -21781,12 +21705,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex -mx-2 mb-2" }, [
-      _c("div", { staticClass: "w-1/3 px-2" }, [
+    return _c("div", { staticClass: "flex flex-wrap -mx-2 mb-2" }, [
+      _c("div", { staticClass: "w-full md:w-1/3 px-2" }, [
         _c("label", { staticClass: "checkbox-label" }, [_vm._v("Gender")])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "w-2/3 px-2" }, [
+      _c("div", { staticClass: "w-full md:w-2/3 px-2" }, [
         _c("div", { staticClass: "flex" }, [
           _c("div", { staticClass: "w-full" }, [
             _c("div", { staticClass: "radio" }, [
@@ -21817,14 +21741,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex -mx-2 mb-2" }, [
-      _c("div", { staticClass: "w-1/3 px-2" }, [
+    return _c("div", { staticClass: "flex flex-wrap -mx-2 mb-2" }, [
+      _c("div", { staticClass: "w-full md:w-1/3 px-2" }, [
         _c("label", { staticClass: "radio-label" }, [_vm._v("Your hobbies")])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "w-2/3 px-2" }, [
+      _c("div", { staticClass: "w-full md:w-2/3 px-2" }, [
         _c("div", { staticClass: "flex" }, [
-          _c("div", { staticClass: "w-1/2" }, [
+          _c("div", { staticClass: "w-full md:w-1/2" }, [
             _c("div", { staticClass: "checkbox" }, [
               _c("input", { attrs: { type: "checkbox", id: "vbasketball" } }),
               _vm._v(" "),
@@ -21834,7 +21758,7 @@ var staticRenderFns = [
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "w-1/2" }, [
+          _c("div", { staticClass: "w-full md:w-1/2" }, [
             _c("div", { staticClass: "checkbox" }, [
               _c("input", { attrs: { type: "checkbox", id: "vfootball" } }),
               _vm._v(" "),
@@ -21844,7 +21768,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "flex" }, [
-          _c("div", { staticClass: "w-1/2" }, [
+          _c("div", { staticClass: "w-full md:w-1/2" }, [
             _c("div", { staticClass: "checkbox" }, [
               _c("input", { attrs: { type: "checkbox", id: "vtennis" } }),
               _vm._v(" "),
@@ -21852,7 +21776,7 @@ var staticRenderFns = [
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "w-1/2" }, [
+          _c("div", { staticClass: "w-full md:w-1/2" }, [
             _c("div", { staticClass: "checkbox" }, [
               _c("input", { attrs: { type: "checkbox", id: "vgolf" } }),
               _vm._v(" "),
@@ -21867,7 +21791,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-1/3 px-2" }, [
+    return _c("div", { staticClass: "w-full md:w-1/3 px-2" }, [
       _c("label", { attrs: { for: "vprofile_image" } }, [
         _vm._v("Profile image")
       ])
@@ -21878,12 +21802,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "input" }, [
-      _c("div", { staticClass: "flex -mx-2" }, [
-        _c("div", { staticClass: "w-1/3 px-2" }, [
+      _c("div", { staticClass: "flex flex-wrap -mx-2" }, [
+        _c("div", { staticClass: "w-full md:w-1/3 px-2" }, [
           _c("label", { attrs: { for: "vcountry" } }, [_vm._v("Country")])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "w-2/3 px-2" }, [
+        _c("div", { staticClass: "w-full md:w-2/3 px-2" }, [
           _c("select", { attrs: { id: "vcountry" } }, [
             _c("option", { attrs: { value: "" } }, [
               _vm._v("Select an option")
@@ -21910,14 +21834,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "input" }, [
-      _c("div", { staticClass: "flex -mx-2" }, [
-        _c("div", { staticClass: "w-1/3 px-2" }, [
+      _c("div", { staticClass: "flex flex-wrap -mx-2" }, [
+        _c("div", { staticClass: "w-full md:w-1/3 px-2" }, [
           _c("label", { attrs: { for: "vbio" } }, [
             _vm._v("Tell us more about you")
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "w-2/3 px-2" }, [
+        _c("div", { staticClass: "w-full md:w-2/3 px-2" }, [
           _c("textarea", { attrs: { id: "vbio" } })
         ])
       ])
@@ -21928,14 +21852,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "input" }, [
-      _c("div", { staticClass: "flex -mx-2" }, [
-        _c("div", { staticClass: "w-1/3 px-2" }, [
+      _c("div", { staticClass: "flex flex-wrap -mx-2" }, [
+        _c("div", { staticClass: "w-full md:w-1/3 px-2" }, [
           _c("label", { attrs: { for: "vfavorite_fruit" } }, [
             _vm._v("What's your favorite fruit?")
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "w-2/3 px-2" }, [
+        _c("div", { staticClass: "w-full md:w-2/3 px-2" }, [
           _c("select", { attrs: { id: "vfavorite_fruit", multiple: "" } }, [
             _c("option", { attrs: { value: "banana" } }, [_vm._v("Banana")]),
             _vm._v(" "),
@@ -21952,7 +21876,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex -mx-2" }, [
-      _c("div", { staticClass: "ml-auto w-2/3 px-2" }, [
+      _c("div", { staticClass: "ml-auto w-full md:w-2/3 px-2" }, [
         _c("button", { staticClass: "button", attrs: { type: "submit" } }, [
           _vm._v("Submit")
         ])
@@ -22628,26 +22552,6 @@ var btn = '\n      <div class="text-center">\n          <button class="button in
                     enabled: false
                 } }],
             rows: [{ id: 1, name: "John", age: 20, createdAt: '201-10-31:9: 35 am', score: 0.03343, btn: btn }, { id: 2, name: "Jane", age: 24, createdAt: '2011-10-31', score: 0.03343, btn: btn }, { id: 3, name: "Susan", age: 16, createdAt: '2011-10-30', score: 0.03343, btn: btn }, { id: 4, name: "Chris", age: 55, createdAt: '2011-10-11', score: 0.03343, btn: btn }, { id: 5, name: "Dan", age: 40, createdAt: '2011-10-21', score: 0.03343, btn: btn }, { id: 6, name: "John", age: 20, createdAt: '2011-10-31', score: 0.03343, btn: btn }]
-            // rows: [
-            //     {
-            //         mode: 'span', // span means this header will span all columns
-            //         label: 'Header One', // this is the label that'll be used for the header
-            //         html: false, // if this is true, label will be rendered as html
-            //         children: [
-            //             { id:1, name:"John", age: 20, createdAt: '201-10-31:9: 35 am',score: 0.03343 },
-            //             { id:2, name:"Jane", age: 24, createdAt: '2011-10-31', score: 0.03343 },
-            //         ]
-            //     },
-            //     {
-            //         mode: 'span', // span means this header will span all columns
-            //         label: 'Header Two', // this is the label that'll be used for the header
-            //         html: false, // if this is true, label will be rendered as html
-            //         children: [
-            //             { id:3, name:"Susan", age: 16, createdAt: '2011-10-30', score: 0.03343 },
-            //             { id:4, name:"Chris", age: 55, createdAt: '2011-10-11', score: 0.03343 },
-            //         ]
-            //     }
-            // ]
         };
     },
 
@@ -35304,163 +35208,6 @@ if (false) {
 /* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var disposed = false
-var normalizeComponent = __webpack_require__(0)
-/* script */
-var __vue_script__ = null
-/* template */
-var __vue_template__ = __webpack_require__(108)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "src/javascript/components/SignIn.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-d758329c", Component.options)
-  } else {
-    hotAPI.reload("data-v-d758329c", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 108 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "auth h-full" }, [
-    _c("div", { staticClass: "auth-main" }, [
-      _c("div", { staticClass: "auth-content" }, [
-        _c("h1", { staticClass: "auth-title" }, [_vm._v("Sign in")]),
-        _vm._v(" "),
-        _c(
-          "form",
-          {
-            on: {
-              submit: function($event) {
-                $event.preventDefault()
-                return (function(e) {})($event)
-              }
-            }
-          },
-          [
-            _vm._m(0),
-            _vm._v(" "),
-            _vm._m(1),
-            _vm._v(" "),
-            _vm._m(2),
-            _vm._v(" "),
-            _vm._m(3)
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _vm._m(4)
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input" }, [
-      _c("label", { attrs: { for: "aemail" } }, [_vm._v("Email")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "email", id: "aemail" } }),
-      _vm._v(" "),
-      _c("span", { staticClass: "input-error" }, [
-        _vm._v("The email field is required.")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input" }, [
-      _c("label", { attrs: { for: "apassword" } }, [_vm._v("Password")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "password", id: "apassword" } }),
-      _vm._v(" "),
-      _c("span", { staticClass: "input-error" }, [
-        _vm._v("The password field is required.")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "checkbox" }, [
-      _c("input", { attrs: { type: "checkbox", id: "remember" } }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "remember" } }, [_vm._v("Remember me")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex" }, [
-      _c(
-        "button",
-        { staticClass: "button w-full", attrs: { type: "submit" } },
-        [_vm._v("Submit")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex justify-between mt-4" }, [
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Forgot password?")]),
-      _vm._v(" "),
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Sign up")])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-d758329c", module.exports)
-  }
-}
-
-/***/ }),
-/* 109 */
-/***/ (function(module, exports, __webpack_require__) {
-
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -35483,7 +35230,7 @@ if (false) {
 }
 
 /***/ }),
-/* 110 */
+/* 108 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

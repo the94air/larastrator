@@ -2,6 +2,9 @@
     @apply flex flex-row-reverse items-start bg-white shadow-alert p-5 mb-5 rounded-t w-full;
     border-top: 0.3rem solid $success-alert-border-top-color;
     padding-top: 0.95rem;
+    div {
+        @apply w-full;
+    }
     .title {
         @apply mb-2;
         color: $success-alert-title-color;
