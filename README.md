@@ -2,7 +2,7 @@
 >Build a nice looking admin panel in a blink.
 >_Try it your self now. It's easy._
 
-## [Demo](https://larastrator.github.io/)
+## [Demo](https://the94air.github.io/larastrator)
 
 Larastrator is a lightweight admin panel components. it's inspired by [refactoringui](https://refactoringui.com/) best practices. It depends on the next tools:
 1. Tailwindcss.
