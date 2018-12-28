@@ -4,25 +4,25 @@
 
 ## [Demo](https://the94air.github.io/larastrator)
 
-Larastrator is a lightweight admin panel components. it's inspired by [refactoringui](https://refactoringui.com/) best practices. It depends on the next tools:
+Larastrator is a lightweight admin panel components. it's inspired by [RefactoringUI](https://refactoringui.com/) best practices. It depends on the next tools:
 1. Tailwindcss.
 2. Fontawesome 5.
 3. Vue framework.
-4. `vue-slidout`  NPM package.
-5. `vue-slide-up-down`  NPM package.
-6. `vue-notification`  NPM package.
-7. `vue-good-table`  NPM package.
+4. `vue-slidout` NPM package.
+5. `vue-slide-up-down` NPM package.
+6. `vue-notification` NPM package.
+7. `vue-good-table` NPM package.
 
 ## installation
 ```bash
-$ npm install larastrator vue vue-slidout vue-slide-up-down vue-notification \
-              vue-good-table --save
+$ npm install larastrator
+$ npm install vue vue-slidout vue-slide-up-down vue-notification vue-good-table --save
 $ npm install tailwindcss --save-dev
-# Then, you will need to to complete the tailwindcss installation
-# https://tailwindcss.com/docs/installation
 ```
+Then, you will need to to complete the tailwindcss installation
+https://tailwindcss.com/docs/installation
 
-after you create the tailwind config file inside your project, add the next configurations as well
+after creating the tailwind config file inside your project, add the next configurations as well
 ```javascript
 // Add these colors to the colors object
 let colors = {
@@ -821,16 +821,18 @@ If you want to use the notification component some were else:
             return {
                 columns: [
                     { label: 'Name', field: 'name', filterOptions: {
-  	                    enabled: false, // enable filter for this column
-                        placeholder: 'Filter This Thing', // placeholder for filter input
-                        filterDropdownItems: [], // dropdown (with selected values) instead of text input
-                    }, },
-                    { label: 'Age', field: 'age' },
-                    { label: 'Created On', field: 'createdAt', dateInputFormat: 'YYYY-MM-DD', dateOutputFormat: 'MMM Do YY' },
-                    { label: 'Percent', field: 'score' },
+                            enabled: false, // enable filter for this column
+                            placeholder: 'Filter This Thing', // placeholder for filter input
+                            filterDropdownItems: [], // dropdown (with selected values) instead of text input
+                        },
+                    },
+                    { label: 'Age', field: 'age', type: 'number', },
+                    { label: 'Created On', field: 'createdAt', dateInputFormat: 'YYYY-MM-DD', dateOutputFormat: 'MMM Do YY', type: 'date', },
+                    { label: 'Percent', field: 'score', type: 'percentage', },
                     { label: 'Action', field: 'btn', html: true, filterOptions: {
-                        enabled: false
-                    }, },
+                            enabled: false
+                        },
+                    },
                 ],
                 rows: [
                     { id:1, name:"John", age: 20, createdAt: '201-10-31:9: 35 am',score: 0.03343, btn: btn, },

@@ -22539,7 +22539,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-var btn = '\n      <div class="text-center">\n          <button class="button info">Open</button>\n          <button class="button success">Edit</button>\n          <button class="button danger">Delete</button>\n      </div>\n  ';
+var btn = '\n    <div class="text-center">\n        <button class="button info">Open</button>\n        <button class="button success">Edit</button>\n        <button class="button danger">Delete</button>\n    </div>\n';
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -22548,9 +22548,11 @@ var btn = '\n      <div class="text-center">\n          <button class="button in
                     enabled: false, // enable filter for this column
                     placeholder: 'Filter This Thing', // placeholder for filter input
                     filterDropdownItems: [] // dropdown (with selected values) instead of text input
-                } }, { label: 'Age', field: 'age' }, { label: 'Created On', field: 'createdAt', dateInputFormat: 'YYYY-MM-DD', dateOutputFormat: 'MMM Do YY' }, { label: 'Percent', field: 'score' }, { label: 'Action', field: 'btn', html: true, filterOptions: {
+                }
+            }, { label: 'Age', field: 'age', type: 'number' }, { label: 'Created On', field: 'createdAt', dateInputFormat: 'YYYY-MM-DD', dateOutputFormat: 'MMM Do YY', type: 'date' }, { label: 'Percent', field: 'score', type: 'percentage' }, { label: 'Action', field: 'btn', html: true, filterOptions: {
                     enabled: false
-                } }],
+                }
+            }],
             rows: [{ id: 1, name: "John", age: 20, createdAt: '201-10-31:9: 35 am', score: 0.03343, btn: btn }, { id: 2, name: "Jane", age: 24, createdAt: '2011-10-31', score: 0.03343, btn: btn }, { id: 3, name: "Susan", age: 16, createdAt: '2011-10-30', score: 0.03343, btn: btn }, { id: 4, name: "Chris", age: 55, createdAt: '2011-10-11', score: 0.03343, btn: btn }, { id: 5, name: "Dan", age: 40, createdAt: '2011-10-21', score: 0.03343, btn: btn }, { id: 6, name: "John", age: 20, createdAt: '2011-10-31', score: 0.03343, btn: btn }]
         };
     },
