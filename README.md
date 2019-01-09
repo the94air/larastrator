@@ -2,27 +2,33 @@
 >Build a nice looking admin panel in a blink.
 >_Try it your self now. It's easy._
 
-## [Demo](https://the94air.github.io/larastrator)
+## Demo
+The demo website will be down for a while because we are moving to a `js.org` domain.
+**Full-featured documentation and package improvements are coming soon.**
+[Demo](https://larastrator.js.org)
 
+## Intro
 Larastrator is a lightweight admin panel components. it's inspired by [RefactoringUI](https://refactoringui.com/) best practices. It depends on the next tools:
 1. Tailwindcss.
 2. Fontawesome 5.
 3. Vue framework.
-4. `vue-slidout` NPM package.
+4. `vue-slideout` NPM package.
 5. `vue-slide-up-down` NPM package.
 6. `vue-notification` NPM package.
 7. `vue-good-table` NPM package.
 
 ## installation
+Install the package and the dependencies from NPM:
 ```bash
-$ npm install larastrator
-$ npm install vue vue-slidout vue-slide-up-down vue-notification vue-good-table --save
+$ npm install larastrator --save
+$ npm install vue vue-slideout vue-slide-up-down vue-notification vue-good-table --save
 $ npm install tailwindcss --save-dev
 ```
 Then, you will need to to complete the tailwindcss installation
 https://tailwindcss.com/docs/installation
 
-after creating the tailwind config file inside your project, add the next configurations as well
+## Setup
+1. After creating the tailwind config file inside your project, add the next configurations as well
 ```javascript
 // Add these colors to the colors object
 let colors = {
@@ -34,17 +40,6 @@ let colors = {
 
 // Add the default font
 module.exports = {
-    fonts: {
-        'sans': [
-            'Source\\ Sans\\ Pro',
-            // ...
-        ],
-
-        'serif': [
-            'Source\\ Sans\\ Pro',
-            // ...
-        ]
-    }
 
     // ...
 
@@ -57,7 +52,6 @@ module.exports = {
     // ...
 
     modules: {
-        fonts: false,
         width: ['responsive', 'hover'],
     }
     
@@ -69,9 +63,24 @@ module.exports = {
             padding: '1rem',
         }),
     ],
+
+    // ...
+
+    // Optional
+    fonts: {
+        'sans': [
+            'Source\\ Sans\\ Pro',
+            // ...
+        ],
+
+        'serif': [
+            'Source\\ Sans\\ Pro',
+            // ...
+        ]
+    }
 }
 ```
-Add the default font into your `<head>` or use your own font.
+2. Add the default font into your `<head>` or use your own font.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -97,14 +106,15 @@ Add the default font into your `<head>` or use your own font.
 </body>
 </html>
 ```
-## How to use
-### SCSS
-After installation import the `scss` files into your project.
+3. Import SASS files
+After installation import the `scss` files into your project and copy the `variables` file in your working directory if you want to change the styling.
 ```scss
 @tailwind preflight;
 @tailwind components;
 
 @import '~larastrator/src/sass/components/variables';
+@import './your/project/directory/variables';
+
 @import '~larastrator/src/sass/components/normalize';
 @import '~larastrator/src/sass/components/navbar';
 @import '~larastrator/src/sass/components/slideout';
@@ -123,14 +133,15 @@ After installation import the `scss` files into your project.
 
 // Or
 // @import '~larastrator/src/sass/larastrator';
+// @import './your/project/directory/variables';
 
 // Your custom scss
 
 @tailwind utilities;
 ```
 
-### javascript
-You will need to import the required icons from fontawesome into your javascript.
+4. JavaScript
+You will need to import the required icons from fontawesome into your javaScript.
 ```javascript
 import Vue from 'vue';
 import { dom, config, library } from '@fortawesome/fontawesome-svg-core';
@@ -154,15 +165,18 @@ Vue.component('Fa', FontAwesomeIcon);
 // Example <Fa :icon="['fas',  'home']" />
 ```
 
+5. Notifications
 Then import the notifications package because we will need it later.
 ```javascript
 import Notifications from 'vue-notification';
 
 Vue.use(Notifications);
 ```
+
 ## Components
+
 ### Navbar
-```vue
+```html
 <template>
     <nav class="navbar navbar-fixed">
         <div class="container">
@@ -229,9 +243,10 @@ Vue.use(Notifications);
     }
 </style>
 ```
+
 ### Panel
-to build the panel area and the sidebar you will need to use `vue-slidout` package.
-```vue
+to build the panel area and the sidebar you will need to use `vue-slideout` package.
+```html
 <template>
     <!-- panel main component -->
     <Slideout menu="#sidebar" panel="#content">
@@ -326,7 +341,7 @@ to build the panel area and the sidebar you will need to use `vue-slidout` packa
 </script>
 ```
 ### Alerts
-```vue
+```html
 <template>
     <div>
 
@@ -369,9 +384,10 @@ to build the panel area and the sidebar you will need to use `vue-slidout` packa
     </div>
 </template>
 ```
+
 ### Notification
 If you want to use the notification component some were else:
-```vue
+```html
 <template>
     <div class="notification">
         <div>Your new post has been saved!</div>
@@ -384,33 +400,37 @@ If you want to use the notification component some were else:
 
 ### Breadcrumb
 ```html
-<ul class="breadcrumb">
-    <li>
-        <a href="#">Page 1</a>
-    </li>
-    <li>
-        <a href="#">Page 2</a>
-    </li>
-    <li>
-        <a href="#">Page 3</a>
-    </li>
-    <li>
-        <a class="select">Page 4</a>
-    </li>
-</ul>
+<template>
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">Page 1</a>
+        </li>
+        <li>
+            <a href="#">Page 2</a>
+        </li>
+        <li>
+            <a href="#">Page 3</a>
+        </li>
+        <li>
+            <a class="select">Page 4</a>
+        </li>
+    </ul>
+</template>
 ```
 
 ### Buttons
 ```html
-<button class="button">Button</button>
-<button class="button success">Button</button>
-<button class="button danger">Button</button>
-<button class="button info">Button</button>
-<button class="button warning">Button</button>
+<template>
+    <button class="button">Button</button>
+    <button class="button success">Button</button>
+    <button class="button danger">Button</button>
+    <button class="button info">Button</button>
+    <button class="button warning">Button</button>
+</template>
 ```
 
 ### Horizontal Form
-```vue
+```html
 <template>
     <form @submit.prevent="(e) => {}">
         <div class="flex flex-wrap -mx-2">
@@ -425,7 +445,7 @@ If you want to use the notification component some were else:
         </div>
         <div class="flex flex-wrap -mx-2 mb-2">
             <div class="w-full px-2">
-                <label class="checkbox-label">Gender</label>
+                <label class="radio-label">Gender</label>
             </div>
             <div class="radio w-full md:w-1/2 px-2">
                 <input type="radio" name="gender" id="male">
@@ -438,7 +458,7 @@ If you want to use the notification component some were else:
         </div>
         <div class="flex flex-wrap -mx-2 mb-2">
             <div class="w-full px-2">
-                <label class="radio-label">Your hobbies</label>
+                <label class="checkbox-label">Your hobbies</label>
             </div>
             <div class="checkbox w-full md:w-1/2 px-2">
                 <input type="checkbox" id="basketball">
@@ -519,7 +539,7 @@ If you want to use the notification component some were else:
 </script>
 ```
 ### Vertical Form
-```vue
+```html
 <template>
     <form @submit.prevent="(e) => {}">
         <div class="input">
@@ -683,7 +703,7 @@ If you want to use the notification component some were else:
 ```
 
 ### Pagination
-```vue
+```html
 <template>
     <nav class="paginate">
         <a class="previous" href="#"><Fa :icon="['fas', 'arrow-left']" /> Prev</a>
@@ -704,7 +724,7 @@ If you want to use the notification component some were else:
 ```
 
 ### Table
-```vue
+```html
 <template>
     <div class="w-full">
         <h2 class="mb-4">Table example</h2>
@@ -751,7 +771,7 @@ If you want to use the notification component some were else:
 ```
 
 ### DataTable
-```vue
+```html
 <template>
     <div class="w-full">
         <h2 class="mb-4">DataTable example</h2>
@@ -855,7 +875,7 @@ If you want to use the notification component some were else:
 ```
 
 ### Sign in
-```vue
+```html
 <template>
     <div class="h-screen">
         <div class="auth h-full">
@@ -893,7 +913,7 @@ If you want to use the notification component some were else:
 ```
 
 ### Sign up
-```vue
+```html
 <template>
     <div class="h-screen">
         <div class="auth h-full">
