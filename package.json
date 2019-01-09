@@ -1,6 +1,6 @@
 {
   "name": "larastrator",
-  "version": "0.0.2-alpha.3",
+  "version": "0.0.2-alpha.4",
   "description": "A lightweight admin panel components",
   "main": "index.js",
   "scripts": {
