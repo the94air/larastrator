@@ -13,9 +13,6 @@
                         <a href="signin.html" class="navbar-link">Sign in</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="signup.html" class="navbar-link">Sign up</a>
-                    </li>
-                    <li class="navbar-item">
                         <a href="#" class="navbar-notify">
                             <Fa :icon="['far', 'bell']" />
                             <span class="navbar-dot bg-red-dark text-white">8</span>

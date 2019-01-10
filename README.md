@@ -1,11 +1,17 @@
+<p align="center">
+    <img src="src/images/larastrator.png?raw=true" alt="Larastrator" title="Larastrator" width="150"/>
+</p>
+
 # Larastrator
->Build a nice looking admin panel in a blink.
->_Try it your self now. It's easy._
+Build a nice looking admin panel in a blink.  
+_Try it your self now. It's easy._
+
+**A full-featured documentation and package improvements are coming soon to make it even more easier.**
+
+> I build this project to defeat the ugliness of most admin panels on the web with the power of Vue. I don't consider this as a full solution for everyone but mostly it can help a lot of people as I hope.
 
 ## Demo
-The demo website will be down for a while because we are moving to a `js.org` domain.
-**Full-featured documentation and package improvements are coming soon.**
-[Demo](https://larastrator.js.org)
+[https://larastrator.js.org](https://larastrator.js.org)
 
 ## Intro
 Larastrator is a lightweight admin panel components. it's inspired by [RefactoringUI](https://refactoringui.com/) best practices. It depends on the next tools:
@@ -38,7 +44,6 @@ let colors = {
     'brand-grey-lightest': '#f7f7f7',
 }
 
-// Add the default font
 module.exports = {
 
     // ...
@@ -67,6 +72,7 @@ module.exports = {
     // ...
 
     // Optional
+    // Add the default font
     fonts: {
         'sans': [
             'Source\\ Sans\\ Pro',
@@ -107,7 +113,7 @@ module.exports = {
 </html>
 ```
 3. Import SASS files
-After installation import the `scss` files into your project and copy the `variables` file in your working directory if you want to change the styling.
+After installation import the `sass` files into your project and copy the `variables` file in your working directory if you want to change the styling, colors, and animations.
 ```scss
 @tailwind preflight;
 @tailwind components;
@@ -135,7 +141,7 @@ After installation import the `scss` files into your project and copy the `varia
 // @import '~larastrator/src/sass/larastrator';
 // @import './your/project/directory/variables';
 
-// Your custom scss
+// Here your custom sass
 
 @tailwind utilities;
 ```

@@ -7,13 +7,17 @@
         </div>
         <div class="panel-card">
             <VerticalForm />
-            <hr>
+        </div>
+        <div class="panel-card">
+            <h2 class="mb-4">Pagination</h2>
             <Pagination />
         </div>
         <Alerts />
         <Buttons />
         <div class="panel-card">
             <Table class="mb-5" />
+        </div>
+        <div class="panel-card">
             <DataTable />
         </div>
     </div>

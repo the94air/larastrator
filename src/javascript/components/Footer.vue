@@ -1,3 +1,13 @@
 <template>
-    <footer><small>&copy; Larastrator 2018</small></footer>
+    <footer><small>&copy; Larastrator {{ copy }}</small></footer>
 </template>
+
+<script>
+    export default {
+        computed: {
+            copy() {
+                return new Date().getFullYear();
+            }
+        }
+    }
+</script>
