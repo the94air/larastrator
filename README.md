@@ -908,53 +908,8 @@ If you want to use the notification component some were else:
                         </div>
                     </form>
                 </div>
-                <div class="flex justify-between mt-4">
+                <div class="text-center mt-4">
                     <a href="#">Forgot password?</a>
-                    <a href="#">Sign up</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
-```
-
-### Sign up
-```html
-<template>
-    <div class="h-screen">
-        <div class="auth h-full">
-            <div class="auth-main">
-                <div class="auth-content">
-                    <h1 class="auth-title">Sign up</h1>
-                    <form>
-                        <div class="input">
-                            <label for="full_name">Full name</label>
-                            <input type="text" id="full_name">
-                            <span class="input-error">The full name field is required.</span>
-                        </div>
-                        <div class="input">
-                            <label for="bemail">Email</label>
-                            <input type="email" id="bemail">
-                            <span class="input-error">The email field is required.</span>
-                        </div>
-                        <div class="input">
-                            <label for="apassword">Password</label>
-                            <input type="password" id="bpassword">
-                            <span class="input-error">The password field is required.</span>
-                        </div>
-                        <div class="input">
-                            <label for="brepeat_password">Password confirmation</label>
-                            <input type="password" id="brepeat_password">
-                            <span class="input-error">The password confirmation field is required.</span>
-                        </div>
-                        <div class="flex">
-                            <button type="submit" class="button w-full">Submit</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="flex justify-between mt-4">
-                    <a href="#">Forgot password?</a>
-                    <a href="#">Sign in</a>
                 </div>
             </div>
         </div>
