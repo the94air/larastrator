@@ -1,24 +1,26 @@
 let mix = require('laravel-mix');
-let tailwindcss = require('tailwindcss');
 
 
-mix.setPublicPath('docs')
-   .setResourceRoot('http://larastrator.alpha/');
+mix
+//    .setPublicPath('public')
+   .setResourceRoot('http://larastrator.test/');
 
-if (!mix.inProduction()) {
-    mix.js('src/javascript/app.js', 'docs/javascript')
-       .sass('src/sass/larastrator.scss', 'docs/css')
-       .copy('docs/css/app.css', 'dist/larastrator.css')
-       .copyDirectory('src/images', 'docs/images')
-       .options({
-            processCssUrls: false,
-            postCss: [
-                tailwindcss('./tailwind.js')
-            ],
-        });
-} else {
-    mix.minify('dist/larastrator.css');
-}
+mix.js('src/javascript/app.js', 'public/javascript')
+    .copyDirectory('src/images', 'public/images')
+    .copyDirectory('public/images', 'images')
+    .copyDirectory('public/javascript', 'javascript')
+    .copy('public/index.html', 'index.html')
+    .copy('public/signin.html', 'signin.html')
+    .options({
+        processCssUrls: false
+    });
+
+
+
+
+
+
+
 
 
 

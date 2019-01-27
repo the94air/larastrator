@@ -53,7 +53,7 @@
 
 <style scoped>
     .dropdown-slide-down-enter-active, .dropdown-slide-down-leave-active {
-        transition: all .3s ease;
+        transition: all 150ms ease;
     }
     .dropdown-slide-down-enter, .dropdown-slide-down-leave-to  {
         transform: translateY(-10px) translateX(10px);
