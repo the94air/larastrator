@@ -15,7 +15,7 @@
             .select {
                 @apply pointer-events-none;
                 transform: scale(.9);
-                background: $pagination-selected-background;
+                background: config('ls.pagination.select.background-color');
             }
         }
     }

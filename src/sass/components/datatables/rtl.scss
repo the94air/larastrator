@@ -10,7 +10,7 @@
 	.vgt-table {
 		th.line-numbers, th.vgt-checkbox-col {
 			border-right: none;
-			border-left: 1px solid $datatable-header-border-color;
+			border-left: config('ls.datatables.rtl.column.line-number-and-checkbox.border-left');
 		}
 		th {
 			&.sorting {
@@ -25,18 +25,18 @@
 			}
 		}
 		tr:first-child th:first-child {
-			border-top-right-radius: $datatable-border-radius;
+			border-top-right-radius: config('ls.datatables.border-radius');
 		}
 		tr:first-child th:last-child {
-			border-top-left-radius: $datatable-border-radius;
+			border-top-left-radius: config('ls.datatables.border-radius');
 		}
 		tr:last-child th.line-numbers:first-child {
-			border-bottom-right-radius: $datatable-border-radius;
+			border-bottom-right-radius: config('ls.datatables.border-radius');
 		}
 	}
 	.vgt-selection-info-row {
 		a {
 			@apply mr-3;
 		}
-	}	
+	}
 }

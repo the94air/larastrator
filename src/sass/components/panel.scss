@@ -5,10 +5,12 @@
     }
 }
 
-.panel-card {
-    @apply bg-white shadow rounded p-5 mb-5 w-full;
-}
-
 .panel-title {
     @apply mb-5;
+}
+
+.panel-card {
+    @apply rounded p-5 mb-5 w-full;
+    background-color: config('ls.panel.card.background-color');
+    box-shadow: config('ls.panel.card.box-shadow');
 }

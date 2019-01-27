@@ -10,9 +10,9 @@
 .notification {
     @apply justify-between content-start px-4 py-4 m-2 rounded-sm;
     display: flex !important;
-    background: $notification-background-color !important;
-    color: $notification-color;
-    box-shadow: $notification-shadow !important;
+    background-color: config('ls.notifications.background-color') !important;
+    color: config('ls.notifications.text-color');
+    box-shadow: config('ls.notifications.box-shadow') !important;
     .close {
         @apply ml-4 cursor-pointer;
         &:hover, &:focus {

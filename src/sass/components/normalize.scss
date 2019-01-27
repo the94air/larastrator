@@ -1,32 +1,35 @@
-// Fonts
-html {
-    font-family: $main-font-family;
-    color: $main-text-color;
-}
-
 body {
-    font-family: $main-font-family;
-    background: $body-background-color;
+    @apply font-sans;
+    font-weight: config('ls.body.font-weight');
+    background-color: config('ls.body.background-color');
+    color: config('ls.body.text-color');
     width: 100%;
     height: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    font-weight: config('ls.headings.font-weight');
+    color: config('ls.headings.text-color');
+}
+
 ::selection {
-    background: $selection-background-color;
-    text-shadow: none;
+    background-color: config('ls.selection.background-color');
+    color: config('ls.selection.text-color');
+    text-shadow: config('ls.selection.text-shadow');
 }
 
 a {
-    color: $links-color;
-    text-decoration: none;
+    color: config('ls.links.text-color');
+    transition: config('ls.links.transition');
+    text-decoration: config('ls.links.text-decoration');
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
-    transition: color $links-color-transition-function $links-color-transition-duration;
 }
 
-a:hover {
-    color: $links-color-hover;
-    text-decoration: underline;
+a:hover, a:focus {
+    color: config('ls.links.hover.text-color');
+    text-decoration: config('ls.links.hover.text-decoration');
 }
 
 a:not([href]):not([tabindex]) {
@@ -44,6 +47,6 @@ a:not([href]):not([tabindex]):focus {
 }
 
 hr {
-    @apply h-px my-4;
-    background: $horizonal-rule-background-color;
+    @apply h-px my-5;
+    background-color: config('ls.horizonal-rules.background-color');
 }

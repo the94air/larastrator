@@ -1,13 +1,13 @@
 .alert {
     @apply flex flex-row-reverse items-start bg-white shadow-alert p-5 mb-5 rounded-t w-full;
-    border-top: 0.3rem solid $success-alert-border-top-color;
+    border-top: config('ls.alerts.success.border-top');
     padding-top: 0.95rem;
     div {
         @apply w-full;
     }
     .title {
         @apply mb-2;
-        color: $success-alert-title-color;
+        color: config('ls.alerts.success.title.text-color');
         font-weight: 600;
     }
     p {
@@ -16,7 +16,7 @@
     .icon {
         @apply block mr-3;
         font-size: 2rem;
-        color: $success-alert-icon-color;
+        color: config('ls.alerts.success.icon.text-color');
         @screen sm {
             font-size: 3rem;
         }
@@ -30,36 +30,36 @@
         }
     }
     &.danger {
-        border-color: $danger-alert-border-top-color;
+        border-top: config('ls.alerts.danger.border-top');
         .title {
-            color: $danger-alert-title-color;
+            color: config('ls.alerts.danger.title.text-color');
         }
         .icon {
-            color: $danger-alert-icon-color;
+            color: config('ls.alerts.danger.icon.text-color');
             &::before {
                 content: "\f06a";
             }
         }
     }
     &.info {
-        border-color: $info-alert-border-top-color;
+        border-top: config('ls.alerts.info.border-top');
         .title {
-            color: $info-alert-title-color;
+            color: config('ls.alerts.info.title.text-color');
         }
         .icon {
-            color: $info-alert-icon-color;
+            color: config('ls.alerts.info.icon.text-color');
             &::before {
                 content: "\f05a";
             }
         }
     }
     &.warning {
-        border-color: $warning-alert-border-top-color;
+        border-top: config('ls.alerts.warning.border-top');
         .title {
-            color: $warning-alert-title-color;
+            color: config('ls.alerts.warning.title.text-color');
         }
         .icon {
-            color: $warning-alert-icon-color;
+            color: config('ls.alerts.warning.icon.text-color');
             &::before {
                 content: "\f071";
             }

@@ -1,0 +1,49 @@
+.table {
+    @apply w-full border-collapse;
+    background-color: config('ls.tables.background-color');
+    border-radius: config('ls.tables.border-radius');
+    thead, tfoot {
+        @apply text-left uppercase;
+        color: config('ls.tables.header-and-footer.text-color');
+        th {
+            font-weight: config('ls.tables.header-and-footer.font-weight');
+            background-color: config('ls.tables.header-and-footer.background-color');
+        }
+    }
+    thead {
+        border-bottom: config('ls.tables.header.border-bottom');
+    }
+    tfoot {
+        border-top: config('ls.tables.footer.border-top');
+    }
+    td, th {
+        @apply py-2 px-4;
+        color: config('ls.tables.text-color');
+    }
+    td {
+        border-bottom: config('ls.tables.row.border-bottom');
+    }
+    tr:first-child th:first-child {
+        border-top-left-radius: config('ls.tables.border-radius');
+    }
+    tr:first-child th:last-child {
+        border-top-right-radius: config('ls.tables.border-radius');
+    }
+    tr:last-child td:first-child {
+        border-bottom-left-radius: config('ls.tables.border-radius');
+    }
+    tr:last-child td:last-child {
+        border-bottom-right-radius: config('ls.tables.border-radius');
+    }
+    tr:last-child td {
+        border-bottom: none;
+    }
+    tfoot {
+        tr:last-child th:first-child {
+            border-bottom-left-radius: config('ls.tables.border-radius');
+        }
+        tr:last-child th:last-child {
+            border-bottom-right-radius: config('ls.tables.border-radius');
+        }
+    }
+}

@@ -1,7 +1,6 @@
 @tailwind preflight;
 @tailwind components;
 
-@import './components/variables';
 @import './components/normalize';
 @import './components/navbar';
 @import './components/slideout';
@@ -10,12 +9,12 @@
 @import './components/content';
 @import './components/notifications';
 @import './components/breadcrumb';
-@import './components/form';
+@import './components/forms';
 @import './components/buttons';
 @import './components/pagination';
 @import './components/alerts';
-@import './components/datatable';
-@import './components/table';
+@import './components/datatables';
+@import './components/tables';
 @import './components/auth';
 
 @tailwind utilities;

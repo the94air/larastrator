@@ -1,15 +1,22 @@
 .breadcrumb {
-    @apply flex flex-wrap px-4 py-3 mb-5 list-reset select-none;
+    @apply flex flex-wrap px-4 py-3 mb-5 list-reset;
     li {
         .svg-inline--fa {
             @apply text-xs mr-2;
         }
         a {
-            @apply text-xs no-underline;
+            @apply text-xs;
+            color: config('ls.breadcrumb.text-color');
+            transition: config('ls.breadcrumb.transition');
+            text-decoration: config('ls.breadcrumb.text-decoration');
+        }
+        a:hover, a:focus {
+            color: config('ls.breadcrumb.hover.text-color');
+            text-decoration: config('ls.breadcrumb.hover.text-decoration');
         }
         a.select {
             @apply pointer-events-none;
-            color: $links-color-hover;
+            color: config('ls.breadcrumb.select.text-color');
         }
     }
     li + li {

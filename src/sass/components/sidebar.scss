@@ -1,5 +1,6 @@
 .sidebar {
     @apply w-4/5 px-4;
+    color: config('ls.sidebar.text-color');
     @screen sm {
         margin-top: 7rem;
     }
@@ -15,30 +16,32 @@
         font-weight: 600;
     }
     .sidebar-menu {
-        @apply list-reset flex flex-col mb-5 select-none;
+        @apply list-reset flex flex-col mb-5;
         > .sidebar-item {
             > .sidebar-link {
                 @apply block flex flex-row no-underline p-2 px-0;
-                border-left: 2px solid $sidebar-line-color;
+                color: config('ls.sidebar.menu.links.text-color');
+                border-left: config('ls.sidebar.menu.links.border-left');
                 .sidebar-link-icon {
                     @apply block;
                     .svg-inline--fa {
                         @apply mx-2;
-                        color: $sidebar-icons-color;
-                        transition: color $sidebar-icons-color-transition-function $sidebar-icons-color-transition-duration;
+                        color: config('ls.sidebar.menu.links.icons.text-color');
+                        transition: config('ls.sidebar.menu.links.icons.transition');
                     }
                 }
-                &:hover .sidebar-link-icon .svg-inline--fa {
-                    color: $sidebar-icons-color-hover;
+                &:hover, &:focus {
+                    color: config('ls.sidebar.menu.links.hover.text-color');
+                    border-left: config('ls.sidebar.menu.links.hover.border-left');
                 }
-                &:hover {
-                    border-color: $sidebar-line-color-hover;
+                &:hover .sidebar-link-icon .svg-inline--fa, &:focus .sidebar-link-icon .svg-inline--fa {
+                    color: config('ls.sidebar.menu.links.icons.hover.text-color');
                 }
                 &.select {
-                    border-color: $sidebar-line-color-select;
-                    color: $links-color;
+                    color: config('ls.sidebar.menu.links.select.text-color');
+                    border-left: config('ls.sidebar.menu.links.select.border-left');
                     .sidebar-link-icon .svg-inline--fa {
-                        color: $sidebar-icons-color-select;
+                        color: config('ls.sidebar.menu.links.icons.select.text-color');
                     }
                 }
             }
@@ -48,16 +51,15 @@
                 > .sidebar-item {
                     > .sidebar-link {
                         @apply block flex flex-row no-underline p-2 px-4;
-                        border-left: 2px solid $sidebar-line-color;
-                        &:hover {
-                            border-color: $sidebar-line-color-hover;
+                        color: config('ls.sidebar.menu.dropdown.links.text-color');
+                        border-left: config('ls.sidebar.menu.dropdown.links.border-left');
+                        &:hover, &:focus {
+                            color: config('ls.sidebar.menu.dropdown.links.hover.text-color');
+                            border-left: config('ls.sidebar.menu.dropdown.links.hover.border-left');
                         }
                         &.select {
-                            border-color: $sidebar-line-color-select;
-                            color: $links-color;
-                            .sidebar-link-icon .svg-inline--fa {
-                                color: $sidebar-icons-color-select;
-                            }
+                            color: config('ls.sidebar.menu.dropdown.links.select.text-color');
+                            border-left: config('ls.sidebar.menu.dropdown.links.select.border-left');
                         }
                     }
                 }

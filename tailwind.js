@@ -46,10 +46,38 @@ View the full documentation at https://tailwindcss.com.
 let colors = {
   'transparent': 'transparent',
 
-  'brand-grey-darker': '#606060',
-  'brand-grey-light': '#b6bec6',
-  'brand-grey-lighter': '#e9eef2',
-  'brand-grey-lightest': '#f7f7f7',
+  'panel-grey-darker': '#606060',
+  'panel-grey-light': '#b6bec6',
+  'panel-grey-lighter': '#e9eef2',
+  'panel-grey-lightest': '#f7f7f7',
+
+  'input-grey-lightest': '#f1f1f1',
+
+  'button-grey-darkest': '#acbbc9', // darken(#dae1e7, 15%)
+  'button-grey-darker': '#bbc8d3', // darken(#dae1e7, 10%)
+  'button-grey-dark': '#dae1e7',
+  'button-grey': '#e9eef1', // lighten(#dae1e7, 5%)
+
+  'panel-green-darkest': '#8ee396', // darken(#cbf2cf, 15%)
+  'panel-green-darker': '#cbf2cf',
+  'panel-green-dark': '#dff7e2', // lighten(#cbf2cf, 5%)
+
+  'panel-red-darkest': '#ff8880', // darken(#ffd0cd, 15%)
+  'panel-red-darker': '#ffd0cd',
+  'panel-red-dark': '#ffe8e6', // lighten(#ffd0cd, 5%)
+
+  'panel-teal-darkest': '#92e2e2', // darken(#cef2f2, 15%)
+  'panel-teal-darker': '#cef2f2',
+  'panel-teal-dark': '#e2f7f7', // lighten(#cef2f2, 5%)
+
+  'button-yellow-darkest': '#ffb979', // darken(#ffe1c6, 15%)
+  'button-yellow-darker': '#ffe1c6',
+  'button-yellow-dark': '#ffeedf', // lighten(#ffe1c6, 5%)
+
+  'datatable-grey': '#909399',
+
+  'datatable-yellow': '#d3aa3b',
+  'datatable-yellow-light': '#faf0c1',
 
   'black': '#22292f',
   'grey-darkest': '#3d4852',
@@ -134,7 +162,356 @@ let colors = {
   'pink-lightest': '#ffebef',
 }
 
+/*
+|-------------------------------------------------------------------------------
+| Larastrator                              https://docs.codolog.com/larastrator
+|-------------------------------------------------------------------------------
+|
+| Configurations in javascript for manipulating the admin panel look and feel
+| using javascript.
+|
+*/
+
+let shadows = {
+  default: '0 2px 4px 0 rgba(0,0,0,0.10)',
+  'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
+  'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
+  'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
+  'outline': '0 0 0 3px rgba(201, 210, 218, 0.5)',
+  'none': 'none',
+  'button': '0 0 0 2px rgba(33, 150, 243, 0.3)',
+  'alert': '0 1px 1px 0px rgba(0, 0, 0, 0.1)',
+};
+
+let ls = {
+  'body': {
+    'background-color': colors["panel-grey-lightest"],
+    'text-color': colors["panel-grey-darker"],
+    'font-weight': 400,
+  },
+  'headings': {
+    'text-color': 'inherit',
+    'font-weight': 600,
+  },
+  'selection': {
+    'background-color': colors["grey-light"],
+    'text-color': 'inherit',
+    'text-shadow': 'none',
+  },
+  'links': {
+    'text-color': colors["panel-grey-darker"],
+    'transition': 'color 100ms ease',
+    'text-decoration': 'none',
+    'hover': {
+      'text-color': colors["grey-dark"],
+      'text-decoration': 'underline',
+    },
+  },
+  'horizonal-rules': {
+    'background-color': colors["grey-light"],
+  },
+  'navbar': {
+    'background-color': colors["white"],
+    'text-color': 'inherit',
+    'box-shadow': shadows.default,
+    'links': {
+      'text-color': colors["panel-grey-darker"],
+      'hover': {
+        'text-color': colors["grey-dark"],
+      },
+      'select': {
+        'border-bottom': '2px solid ' + colors["grey-dark"],
+        'hover': {
+          'text-color': colors["panel-grey-darker"],
+        },
+      },
+    },
+    'dropdown': {
+      'background-color': colors["white"],
+      'links': {
+        'background-color': colors["transparent"],
+        'transition': 'all 100ms ease',
+        'text-color': 'inherit',
+        'hover': {
+          'background-color': colors["grey-light"],
+          'text-color': 'inherit',
+        }
+      },
+    }
+  },
+  'panel': {
+    'card': {
+      'background-color': colors["white"],
+      'box-shadow': shadows.default,
+    }
+  },
+  'sidebar': {
+    'text-color': 'inherit',
+    'menu': {
+      'links': {
+        'text-color': colors["panel-grey-darker"],
+        'border-left': '2px solid ' + colors["grey-light"],
+        'hover': {
+          'text-color': colors["grey-dark"],
+          'border-left': '2px solid ' + colors["grey"],
+        },
+        'select': {
+          'text-color': 'inherit',
+          'border-left': '2px solid ' + colors["grey-dark"],
+        },
+        'icons': {
+          'text-color': colors["panel-grey-light"],
+          'transition': 'color 100ms ease',
+          'hover': {
+            'text-color': colors["grey-dark"],
+          },
+          'select': {
+            'text-color': colors["grey-dark"],
+          },
+        },
+      },
+      'dropdown': {
+        'links': {
+          'text-color': colors["panel-grey-darker"],
+          'border-left': '2px solid ' + colors["grey-light"],
+          'hover': {
+            'text-color': colors["grey-dark"],
+            'border-left': '2px solid ' + colors["grey"],
+          },
+          'select': {
+            'text-color': 'inherit',
+            'border-left': '2px solid ' + colors["grey-dark"],
+          },
+        },
+      },
+    },
+  },
+  'breadcrumb': {
+    'text-color': colors["panel-grey-darker"],
+    'transition': 'color 100ms ease',
+    'text-decoration': 'none',
+    'hover': {
+      'text-color': colors["grey-dark"],
+      'text-decoration': 'none',
+    },
+    'select': {
+      'text-color': colors["grey-dark"],
+    }
+  },
+  'forms': {
+    'text': {
+      'background-color': colors["white"],
+      'text-color': 'inherit',
+      'border': '1px solid ' + colors["panel-grey-light"],
+      'transition': 'all 200ms ease',
+      'disabled': {
+        'background-color': colors["input-grey-lightest"],
+      }
+    },
+    'textarea': {
+      'background-color': colors["white"],
+      'text-color': 'inherit',
+      'border': '1px solid ' + colors["panel-grey-light"],
+      'transition': 'box-shadow 200ms ease',
+      'disabled': {
+        'background-color': colors["input-grey-lightest"],
+      }
+    },
+    'select': {
+      'background-color': colors["white"],
+      'text-color': 'inherit',
+      'border': '1px solid ' + colors["panel-grey-light"],
+      'transition': 'all 200ms ease',
+      'disabled': {
+        'background-color': colors["input-grey-lightest"],
+      },
+      'checked': {
+        'background-color': colors["grey-dark"] + ' linear-gradient(0deg, ' + colors["grey-dark"] + ' 0%, ' + colors["grey-dark"] + ' 100%)',
+        'font-weight': 600,
+      },
+    },
+    'file': {
+      'background-color': colors["button-grey-dark"],
+      'text-color': 'inherit',
+      'transition': 'all 200ms ease',
+      'font-weight': 600,
+      'hover': {
+        'background-color': colors["button-grey"],
+      }
+    },
+    'error': {
+      'text-color': colors["red-dark"],
+    },
+  },
+  'buttons': {
+    'default': {
+      'background-color': colors["button-grey-dark"],
+      'text-color': 'inherit',
+      'transition': 'all 200ms ease',
+      'font-weight': 600,
+      'hover': {
+        'background-color': colors["button-grey"],
+      }
+    },
+    'success': {
+      'background-color': colors["panel-green-darker"],
+      'hover': {
+        'background-color': colors["panel-green-dark"],
+      }
+    },
+    'danger': {
+      'background-color': colors["panel-red-darker"],
+      'hover': {
+        'background-color': colors["panel-red-dark"],
+      }
+    },
+    'info': {
+      'background-color': colors["panel-teal-darker"],
+      'hover': {
+        'background-color': colors["panel-teal-dark"],
+      }
+    },
+    'warning': {
+      'background-color': colors["button-yellow-darker"],
+      'hover': {
+        'background-color': colors["button-yellow-dark"],
+      }
+    },
+  },
+  'pagination': {
+    'select': {
+      'background-color': colors["button-grey-darker"],
+    }
+  },
+  'notifications': {
+    'background-color': colors["black"],
+    'text-color': colors["white"],
+    'box-shadow': '0 0px 8px black',
+  },
+  'alerts': {
+    'success': {
+      'border-top': '0.3rem solid ' + colors["panel-green-darkest"],
+      'title': {
+        'text-color': colors["panel-green-darkest"],
+      },
+      'icon': {
+        'text-color': colors["panel-green-darker"],
+      },
+    },
+    'danger': {
+      'border-top': '0.3rem solid ' + colors["panel-red-darkest"],
+      'title': {
+        'text-color': colors["panel-red-darkest"],
+      },
+      'icon': {
+        'text-color': colors["panel-red-darker"],
+      },
+    },
+    'info': {
+      'border-top': '0.3rem solid ' + colors["panel-teal-darkest"],
+      'title': {
+        'text-color': colors["panel-teal-darkest"],
+      },
+      'icon': {
+        'text-color': colors["panel-teal-darker"],
+      },
+    },
+    'warning': {
+      'border-top': '0.3rem solid ' + colors["button-yellow-darkest"],
+      'title': {
+        'text-color': colors["button-yellow-darkest"],
+      },
+      'icon': {
+        'text-color': colors["button-yellow-darker"],
+      },
+    },
+  },
+  'tables': {
+    'background-color': colors["grey-lighter"],
+    'text-color': colors["grey-darker"],
+    'border-radius': '0.25em',
+    'header-and-footer': {
+      'background-color': colors["panel-grey-lighter"],
+      'text-color': colors["grey-darker"],
+      'font-weight': 600,
+    },
+    'header': {
+      'border-bottom': '2px solid ' + colors["grey"],
+    },
+    'row': {
+      'border-bottom': '1px solid ' + colors["grey"],
+    },
+    'footer': {
+      'border-top': '2px solid ' + colors["grey"],
+    },
+  },
+  'datatables': {
+    'background-color': colors["grey-lighter"],
+    'text-color': colors["grey-darker"],
+    'border-radius': '0.25em',
+    'disabled': {
+      'text-color': colors["datatable-grey"],
+    },
+    'selection-count': {
+      'background-color': colors["datatable-yellow-light"],
+      'text-color': colors["datatable-yellow"],
+    },
+    'header': {
+      'background-color': colors["panel-grey-lighter"],
+      'border': '2px solid ' + colors["grey"],
+    },
+    'column': {
+      'line-number-and-checkbox': {
+        'background-color': colors["panel-grey-lighter"],
+        'border': '1px solid ' + colors["grey"],
+      },
+    },
+    'input': {
+      'text': {
+        'background-color': colors["white"],
+        'text-color': 'inherit',
+        'border': '1px solid ' + colors["panel-grey-light"],
+        'transition': 'all 200ms ease',
+      },
+      'select': {
+        'background-color': colors["white"],
+        'text-color': 'inherit',
+        'border': '1px solid ' + colors["panel-grey-light"],
+        'transition': 'all 200ms ease',
+      }
+    },
+    'rtl': {
+      'column': {
+        'line-number-and-checkbox': {
+          'border-left': '1px solid ' + colors["grey"],
+        },
+      },
+    },
+    'row': {
+      'border-bottom': '1px solid ' + colors["grey"],
+      'hover': {
+        'background-color': colors["grey-light"],
+      },
+    },
+    'select-count': {
+      'background-color': colors["panel-grey-lighter"],
+    },
+  },
+}
+
 module.exports = {
+
+  /*
+  |-----------------------------------------------------------------------------
+  | Larastrator configurations             https://docs.codolog.com/larastrator
+  |-----------------------------------------------------------------------------
+  |
+  | JavaScript configurations are used by larastrator to get rid of annoying
+  | SASS variables.
+  |
+  */
+
+  ls: ls,
 
   /*
   |-----------------------------------------------------------------------------
@@ -753,16 +1130,7 @@ module.exports = {
   |
   */
 
-  shadows: {
-    default: '0 2px 4px 0 rgba(0,0,0,0.10)',
-    'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
-    'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
-    'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
-    'outline': '0 0 0 3px rgba(201, 210, 218, 0.5)',
-    'none': 'none',
-    'button': '0 0 0 2px rgba(33, 150, 243, 0.3)',
-    'alert': '0 1px 1px 0px rgba(0, 0, 0, 0.1)',
-  },
+  shadows: shadows,
 
 
   /*
@@ -884,7 +1252,7 @@ module.exports = {
     display: ['responsive'],
     flexbox: ['responsive'],
     float: ['responsive'],
-    fonts: false,
+    fonts: ['responsive'],
     fontWeights: ['responsive', 'hover', 'focus'],
     height: ['responsive'],
     leading: ['responsive'],

@@ -11,7 +11,7 @@
 		&__select {
 			width: auto;
 			height: auto;
-			background: $datatable-row-count-select-background;
+			background-color: config('ls.datatables.select-count.background-color');
 			color: inherit;
 			&:focus {
 				@apply outline-none shadow-outline;

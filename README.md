@@ -1,14 +1,16 @@
+<p align="center"><a href="https://larastrator.js.org" target="_blank" rel="noopener noreferrer"><img width="200" src="src/images/larastrator.png?raw=true" title="Larastrator" alt="Larastrator logo"></a></p>
+
+<h2 align="center">Larastrator</h2>
+<p align="center">Build a nice looking admin panel in a blink.</p>
+
 <p align="center">
-    <img src="src/images/larastrator.png?raw=true" alt="Larastrator" title="Larastrator" width="150"/>
+<a href="https://npmcharts.com/compare/larastrator?minimal=true"><img src="https://img.shields.io/npm/dm/larastrator.svg" alt="Downloads"></a>
+<a href="https://www.npmjs.com/package/larastrator"><img src="https://img.shields.io/npm/v/larastrator.svg" alt="Version"></a>
+<a href="https://www.npmjs.com/package/larastrator"><img src="https://img.shields.io/npm/l/larastrator.svg" alt="License"></a>
+<br>
 </p>
 
-# Larastrator
-Build a nice looking admin panel in a blink.  
-_Try it your self now. It's easy._
-
 **A full-featured documentation and package improvements are coming soon to make it even more easier.**
-
-> I build this project to defeat the ugliness of most admin panels on the web with the power of Vue. I don't consider this as a full solution for everyone but mostly it can help a lot of people as I hope.
 
 ## Demo
 [https://larastrator.js.org](https://larastrator.js.org)
@@ -22,6 +24,10 @@ Larastrator is a lightweight admin panel components. it's inspired by [Refactori
 5. `vue-slide-up-down` NPM package.
 6. `vue-notification` NPM package.
 7. `vue-good-table` NPM package.
+
+## Browser support
+Larastrator supports the latest, stable releases of all major browsers and platforms. On Windows, we support Internet Explorer 11 / Microsoft Edge.
+
 
 ## installation
 Install the package and the dependencies from NPM:
@@ -38,10 +44,10 @@ https://tailwindcss.com/docs/installation
 ```javascript
 // Add these colors to the colors object
 let colors = {
-    'brand-grey-darker': '#606060',
-    'brand-grey-light': '#b6bec6',
-    'brand-grey-lighter': '#e9eef2',
-    'brand-grey-lightest': '#f7f7f7',
+    'panel-grey-darker': '#606060',
+    'panel-grey-light': '#b6bec6',
+    'panel-grey-lighter': '#e9eef2',
+    'panel-grey-lightest': '#f7f7f7',
 }
 
 module.exports = {
@@ -54,12 +60,6 @@ module.exports = {
         'alert': '0 1px 1px 0px rgba(0, 0, 0, 0.1)',
     }
 
-    // ...
-
-    modules: {
-        width: ['responsive', 'hover'],
-    }
-    
     // ...
 
     plugins: [
@@ -108,7 +108,7 @@ module.exports = {
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>
 ```

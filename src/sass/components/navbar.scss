@@ -1,6 +1,14 @@
 .navbar {
-    @apply shadow py-2 px-4;
-    background: $navbar-background;
+    @apply py-2 px-4;
+    background-color: config('ls.navbar.background-color');
+    color: config('ls.navbar.text-color');
+    box-shadow: config('ls.navbar.box-shadow');
+    a {
+        color: config('ls.navbar.links.text-color');
+    }
+    a:hover, a:focus {
+        color: config('ls.navbar.links.hover.text-color');
+    }
     &.navbar-fixed {
         @apply fixed pin-t pin-l pin-r z-30;
     }
@@ -21,7 +29,7 @@
 }
 
 .navbar-dot, .navbar-status {
-    background: $links-color-hover;
+    background-color: config('colors.grey-dark');
 }
 
 .navbar-menu {
@@ -36,8 +44,14 @@
         > .navbar-link, > .navbar-notify {
             @apply relative no-underline;
         }
+        > .navbar-link {
+            @apply pb-2 mt-2;
+        }
         > .navbar-link.select {
-            @apply underline;
+            border-bottom: config('ls.navbar.links.select.border-bottom');
+        }
+        > .navbar-link.select:hover, .navbar-link.select:focus {
+            color: config('ls.navbar.links.select.hover.text-color');
         }
         > .navbar-notify {
             @apply mr-2;
@@ -69,7 +83,6 @@
                     font-weight: bold;
                     > .navbar-status {
                         @apply inline-block border-2 border-solid rounded-full mr-1;
-                        
                         width: 12px;
                         height: 12px;
                     }
@@ -81,16 +94,17 @@
             margin-top: 1.4rem;
             right: 0;
             width: 150px;
-            background: $navbar-dropdown-background;
-            border: 0.3rem solid $navbar-dropdown-background;
+            background-color: config('ls.navbar.dropdown.background-color');
+            border: 0.3rem solid transparent;
             > .navbar-dropdown-item {
                 > .navbar-dropdown-link {
                     @apply block rounded no-underline p-2 mb-1;
-                    background: $navbar-dropdown-link-background;
-                    transition: all $navbar-dropdown-link-transition-duration $navbar-dropdown-link-transition-function;
+                    background-color: config('ls.navbar.dropdown.links.background-color');
+                    color: config('ls.navbar.dropdown.links.text-color');
+                    transition: config('ls.navbar.dropdown.links.transition');
                     &:hover, &:focus {
-                        background: $navbar-dropdown-link-background-hover;
-                        color: inherit;
+                        background-color: config('ls.navbar.dropdown.links.hover.background-color');
+                        color: config('ls.navbar.dropdown.links.hover.text-color');
                     }
                     &:last-child {
                         @apply mb-0;

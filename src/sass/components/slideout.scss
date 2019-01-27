@@ -25,7 +25,7 @@
 }
 
 .slideout-panel {
-    background: $body-background-color;
+    background: config('ls.body.background-color');
     position: relative;
     z-index: 1;
     will-change: transform;

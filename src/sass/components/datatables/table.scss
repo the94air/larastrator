@@ -1,7 +1,7 @@
 table.vgt-table {
 	@apply border-collapse w-full max-w-full table-auto;
-	background-color: $datatable-background-color;
-	border-radius: $datatable-border-radius;
+	background-color: config('ls.datatables.background-color');
+	border-radius: config('ls.datatables.border-radius');
 	margin-bottom: 0.45rem;
 	&.vgt-fixed-header {
 		@apply absolute z-10;
@@ -19,22 +19,22 @@ table.vgt-table {
 	tr.clickable {
 		@apply cursor-pointer;
 	  	&:hover {
-	    	background-color: $datatable-clickable-row-hover-background-color;
+	    	background-color: config('ls.datatables.row.hover.background-color');
 	  	}
 	}
 	tr:first-child th:first-child {
-        border-top-left-radius: $datatable-border-radius;
+        border-top-left-radius: config('ls.datatables.border-radius');
     }
     tr:first-child th:last-child {
-        border-top-right-radius: $datatable-border-radius;
+        border-top-right-radius: config('ls.datatables.border-radius');
 	}
 	td {
 		@apply py-2 px-4 align-top;
-	  	border-bottom: 1px solid $datatable-row-border-color;
-	  	color: $datatable-body-color;
+	  	border-bottom: config('ls.datatables.row.border-bottom');
+	  	color: config('ls.datatables.text-color');
 	}
     tr:last-child td:last-child {
-        border-bottom-right-radius: $datatable-border-radius;
+        border-bottom-right-radius: config('ls.datatables.border-radius');
     }
     tr:last-child td {
         border-bottom: none;

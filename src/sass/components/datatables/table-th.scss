@@ -1,9 +1,9 @@
 .vgt-table {
 	thead {
-		border-bottom: 2px solid $datatable-header-border-color;
+		border-bottom: config('ls.datatables.header.border');
 		th {
 			@apply align-bottom pr-4 uppercase;
-			background: $datatable-header-background-color;
+			background-color: config('ls.datatables.header.background-color');
 			&.vgt-checkbox-col {
 				@apply align-middle;
 			}
@@ -19,7 +19,7 @@
 			}
 		}
 		th.line-numbers, th.vgt-checkbox-col {
-			border-bottom: 2px solid $datatable-header-border-color;
+			border-bottom: config('ls.datatables.header.border');
 		}
 	}
 	th {
@@ -51,26 +51,26 @@
 	}
 	th.line-numbers, th.vgt-checkbox-col {
 		@apply break-words py-0 px-3 text-center;
-		border-bottom: 1px solid $datatable-row-border-color;
-		border-right: 1px solid $datatable-row-border-color;
+		border-bottom: config('ls.datatables.column.line-number-and-checkbox.border');
+		border-right: config('ls.datatables.column.line-number-and-checkbox.border');
 		width: 25px;
-		background: $datatable-header-background-color;
+		background-color: config('ls.datatables.header.background-color');
 	}
 	tr:last-child {
 		th.line-numbers, th.vgt-checkbox-col {
 			border-bottom: none;
 		}
 		th.line-numbers:first-child {
-			border-bottom-left-radius: $datatable-border-radius;
+			border-bottom-left-radius: config('ls.datatables.border-radius');
 		}
 	}
 	th.filter-th {
 		@apply py-2 px-4;
-		border-top: 2px solid $datatable-header-border-color;
+		border-top: config('ls.datatables.header.border');
 	}
 	th.vgt-row-header {
-		border-bottom: 2px solid $datatable-header-border-color;
-		border-top: 2px solid $datatable-header-border-color;
-		background-color: $datatable-header-background-color;
+		border-bottom: config('ls.datatables.header.border');
+		border-top: config('ls.datatables.header.border');
+		background-color: config('ls.datatables.header.background-color');
 	}
 }

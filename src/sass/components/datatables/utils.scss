@@ -29,5 +29,5 @@
 }
 
 .vgt-text-disabled {
-	color: $datatable-text-disabled;
+	color: config('ls.datatables.disabled.text-color');
 }
