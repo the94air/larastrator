@@ -1,7 +1,6 @@
 let mix = require('laravel-mix');
 let tailwindcss = require('tailwindcss');
 
-
 mix
 //    .setPublicPath('dist')
    .setResourceRoot('http://larastrator.test/');

@@ -10,6 +10,9 @@
     "minify": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
+  "bin": {
+    "larastrator": "lib/cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/the94air/larastrator.git"
@@ -47,6 +50,8 @@
     "@fortawesome/free-regular-svg-icons": "^5.6.3",
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
     "@fortawesome/vue-fontawesome": "^0.1.4",
+    "commander": "^2.19.0",
+    "fs-extra": "^7.0.1",
     "polished": "^2.3.3"
   },
   "bugs": {
