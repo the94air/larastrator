@@ -335,5 +335,3 @@ let ls = {
     },
   },
 }
-
-export default ls;
