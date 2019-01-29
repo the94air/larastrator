@@ -15,8 +15,15 @@ View the full documentation at https://docs.codolog.com/larastrator.
 | Larastrator                              https://docs.codolog.com/larastrator
 |-------------------------------------------------------------------------------
 |
-| Configurations in javascript for manipulating the admin panel look and feel
-| using javascript.
+| You can easily manipulate the admin panel look by modifying the settings
+| below. You can create multiple themes without the need to modify a single
+| SASS file. Larastrator object attributes are used inside Larastrator SASS
+| files so it can be configured right from here with the help of Tailwindcss
+| config() function.
+|
+|  body {
+|    color: config('ls.body.text-color');
+|  }
 |
 */
 

@@ -26,7 +26,7 @@ Larastrator is a lightweight admin panel components. it's inspired by [Refactori
 7. `vue-good-table` NPM package.
 
 ## Browser support
-Larastrator supports the latest, stable releases of all major browsers and platforms. On Windows, we support Internet Explorer 11 / Microsoft Edge.
+Larastrator supports the latest, stable releases of all major browsers and platforms. On Windows, it support Internet Explorer 11 / Microsoft Edge.
 
 
 ## installation
