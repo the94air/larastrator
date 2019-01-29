@@ -14,7 +14,7 @@
         -webkit-appearance: none;
         transition: config('ls.forms.text.transition');
         &:focus {
-            @apply outline-none shadow-outline;
+            @apply outline-none shadow-input;
         }
         &:disabled {
             @apply pointer-events-none opacity-50;
@@ -66,7 +66,7 @@
         -webkit-appearance: none;
         transition: config('ls.forms.select.transition');
         &:focus {
-            @apply outline-none shadow-outline;
+            @apply outline-none shadow-input;
         }
         &:disabled {
             @apply pointer-events-none opacity-50;
@@ -84,7 +84,7 @@
         min-height: 100px;
         transition: config('ls.forms.textarea.transition');
         &:focus {
-            @apply outline-none shadow-outline;
+            @apply outline-none shadow-input;
         }
         &:disabled {
             @apply pointer-events-none opacity-50;
@@ -100,7 +100,7 @@
         border: config('ls.forms.select.border');
         transition: config('ls.forms.select.transition');
         &:focus {
-            @apply outline-none shadow-outline;
+            @apply outline-none shadow-input;
             option:checked {
                 background: config('ls.forms.select.checked.background-color');
                 font-weight: config('ls.forms.select.checked.font-weight');
