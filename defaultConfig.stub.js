@@ -335,5 +335,3 @@ let ls = {
     },
   },
 }
-
-module.exports = ls;
